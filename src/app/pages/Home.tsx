@@ -4,6 +4,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { PhoneDemo } from "../components/PhoneDemo";
+import { LeadFormModal } from "../components/LeadFormModal";
 import { HowItWorks } from "../components/HowItWorks";
 import { Features } from "../components/Features";
 import { DemoCallSection } from "../components/DemoCallSection";
@@ -14,6 +15,7 @@ import { FinalCTA } from "../components/FinalCTA";
 import { Footer } from "../components/Footer";
 
 export function Home() {
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const [isDemoOpen, setIsDemoOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -27,7 +29,7 @@ export function Home() {
   }, [isMobile, navigate]);
 
   const handleDemoClick = () => {
-    setIsDemoOpen(true);
+    setIsLeadFormOpen(true);
   };
 
   // Handle scrolling to hash sections when navigating from other pages
@@ -63,6 +65,14 @@ export function Home() {
         <FinalCTA />
         <Footer />
         
+        <LeadFormModal
+          isOpen={isLeadFormOpen}
+          onClose={() => setIsLeadFormOpen(false)}
+          onSuccess={() => {
+            setIsLeadFormOpen(false);
+            setIsDemoOpen(true);
+          }}
+        />
         <PhoneDemo isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />
       </div>
     </div>

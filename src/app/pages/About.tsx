@@ -4,13 +4,15 @@ import { Footer } from "../components/Footer";
 import { Phone, Zap, Clock, Users } from "lucide-react";
 import { useState } from "react";
 import { PhoneDemo } from "../components/PhoneDemo";
+import { LeadFormModal } from "../components/LeadFormModal";
 import { Link } from "react-router";
 
 export function About() {
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
   const handleDemoClick = () => {
-    setIsDemoOpen(true);
+    setIsLeadFormOpen(true);
   };
 
   return (
@@ -227,6 +229,14 @@ export function About() {
       </section>
 
       <Footer />
+      <LeadFormModal
+        isOpen={isLeadFormOpen}
+        onClose={() => setIsLeadFormOpen(false)}
+        onSuccess={() => {
+          setIsLeadFormOpen(false);
+          setIsDemoOpen(true);
+        }}
+      />
       <PhoneDemo isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />
     </div>
   );

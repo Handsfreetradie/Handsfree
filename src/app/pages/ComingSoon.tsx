@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useState } from "react";
 import { PhoneDemo } from "../components/PhoneDemo";
+import { LeadFormModal } from "../components/LeadFormModal";
 import { Link } from "react-router";
 
 interface ComingSoonProps {
@@ -11,10 +12,11 @@ interface ComingSoonProps {
 }
 
 export function ComingSoon({ title, description }: ComingSoonProps) {
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
   const handleDemoClick = () => {
-    setIsDemoOpen(true);
+    setIsLeadFormOpen(true);
   };
 
   return (
@@ -61,6 +63,14 @@ export function ComingSoon({ title, description }: ComingSoonProps) {
       </div>
 
       <Footer />
+      <LeadFormModal
+        isOpen={isLeadFormOpen}
+        onClose={() => setIsLeadFormOpen(false)}
+        onSuccess={() => {
+          setIsLeadFormOpen(false);
+          setIsDemoOpen(true);
+        }}
+      />
       <PhoneDemo isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />
     </div>
   );

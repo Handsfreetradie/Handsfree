@@ -1,10 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { Phone, ArrowRight, CheckCircle, Star, Zap, Clock, Menu } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { LeadFormModal } from "../../components/LeadFormModal";
 
 export function MobileHome() {
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-white pb-20">
       {/* Mobile Header */}
@@ -52,13 +56,13 @@ export function MobileHome() {
               Get Started Free
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link
-              to="/mobile/demo"
+            <button
+              onClick={() => setIsLeadFormOpen(true)}
               className="w-full px-6 py-3 bg-white text-gray-900 rounded-full text-base border-2 border-gray-200 flex items-center justify-center gap-2"
             >
               <Phone className="w-4 h-4" />
               Try Live Demo
-            </Link>
+            </button>
           </div>
 
           {/* Floating iPhone mockup */}
@@ -201,6 +205,15 @@ export function MobileHome() {
           </Link>
         </div>
       </nav>
+
+      <LeadFormModal
+        isOpen={isLeadFormOpen}
+        onClose={() => setIsLeadFormOpen(false)}
+        onSuccess={() => {
+          setIsLeadFormOpen(false);
+          navigate("/mobile/demo");
+        }}
+      />
     </div>
   );
 }
