@@ -128,7 +128,7 @@ export function MobileFeatures() {
             </div>
 
             {/* Feature Details */}
-            <div className="space-y-2 pl-16">
+            <div className="space-y-2">
               {feature.details.map((detail, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <ChevronRight className="w-4 h-4 text-orange-500 flex-shrink-0" />
