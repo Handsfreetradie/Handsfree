@@ -145,7 +145,7 @@ export function MobileAbout() {
             to="/onboarding" 
             className="inline-block px-8 py-3 bg-gray-900 text-white rounded-full font-medium"
           >
-            Get Started Free
+            Get Started
           </Link>
         </div>
       </section>

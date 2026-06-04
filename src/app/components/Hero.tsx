@@ -60,7 +60,7 @@ export function Hero({ onDemoClick }: { onDemoClick: () => void }) {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-16 px-4"
           >
             <Link to="/onboarding" className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gray-900 text-white rounded-full text-base sm:text-lg hover:bg-gray-800 transition-all hover:scale-105 shadow-lg flex items-center justify-center gap-2">
-              Get Started Free
+              Get Started
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <button

@@ -53,7 +53,7 @@ export function MobileHome() {
               to="/onboarding" 
               className="w-full px-6 py-3 bg-gray-900 text-white rounded-full text-base flex items-center justify-center gap-2"
             >
-              Get Started Free
+              Get Started
               <ArrowRight className="w-4 h-4" />
             </Link>
             <button
