@@ -22,7 +22,6 @@ export function PricingSection() {
         "100 SMS/month included",
         "Captures customer name, number, and job details",
         "Cal.com calendar booking — they book straight into your schedule",
-        "$0.35/SMS after your 100",
       ],
       cta: "Get Started",
       popular: false,
@@ -41,7 +40,6 @@ export function PricingSection() {
         "Captures job type, address, and urgency every time",
         "24/7 after-hours answering",
         "Cal.com calendar booking included",
-        "$0.45/min after 150 mins, $0.35/SMS after 150 texts",
       ],
       cta: "Get Started",
       popular: false,
@@ -58,7 +56,6 @@ export function PricingSection() {
         "400 mins of call answering + 400 SMS/month",
         "Cal.com calendar booking included",
         "Priority support — faster response times, dedicated contact",
-        "$0.45/min after 400 mins, $0.35/SMS after 400 texts",
       ],
       cta: "Get Started",
       popular: true,
@@ -409,7 +406,7 @@ export function PricingSection() {
             },
             {
               question: "What if I go over my minutes?",
-              answer: "Extra SMS is $0.35 each. Extra call time is $0.45/min. Pro includes 400 mins + 400 SMS — the best value for high-volume tradies. For bigger operations, Custom pricing is available.",
+              answer: "Get in touch and we'll sort something out. Pro includes 400 mins + 400 SMS which covers most busy tradies. For bigger operations, Custom pricing is available.",
             },
             {
               question: "Can I bypass the AI for important callers?",
