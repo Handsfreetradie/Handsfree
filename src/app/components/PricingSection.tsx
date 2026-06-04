@@ -21,7 +21,6 @@ export function PricingSection() {
         "Automatic SMS reply when you miss a call",
         "100 SMS/month included",
         "Captures customer name, number, and job details",
-        "Cal.com calendar booking — they book straight into your schedule",
       ],
       cta: "Get Started",
       popular: false,
