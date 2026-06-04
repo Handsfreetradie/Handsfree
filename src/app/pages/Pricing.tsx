@@ -439,8 +439,8 @@ export function Pricing() {
                 answer: "Yep. Upgrade or downgrade whenever you like. No penalties, no questions asked.",
               },
               {
-                question: "What happens after the free trial?",
-                answer: "Your trial lasts 14 days. After that, you'll be charged for your chosen plan. Cancel anytime before and you won't pay a cent.",
+                question: "What's the money-back guarantee?",
+                answer: "If you're not happy in the first 30 days, we'll give you a full refund. No questions asked.",
               },
               {
                 question: "Do I need a new phone number?",
@@ -487,14 +487,14 @@ export function Pricing() {
               Ready to stop missing calls?
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-              Start your free 14-day trial. No credit card required.
+              30-day money-back guarantee. No lock-in contracts.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/onboarding"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-orange-500 text-white rounded-full text-lg hover:bg-orange-600 transition-all"
               >
-                Start Free Trial
+                Get Started
               </Link>
               <Link
                 to="/"

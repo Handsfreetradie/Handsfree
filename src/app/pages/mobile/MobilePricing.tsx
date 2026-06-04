@@ -233,8 +233,8 @@ export function MobilePricing() {
               a: "Yep. Upgrade or downgrade whenever you like. No penalties.",
             },
             {
-              q: "What happens after the trial?",
-              a: "Your trial lasts 14 days. After that, you'll be charged for your chosen plan. Cancel before and pay nothing.",
+              q: "What's the money-back guarantee?",
+              a: "If you're not happy in the first 30 days, we'll give you a full refund. No questions asked.",
             },
             {
               q: "Do I need a new number?",
@@ -264,13 +264,13 @@ export function MobilePricing() {
         <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl mb-3">Ready to get started?</h2>
           <p className="text-orange-50 mb-6 text-sm">
-            14-day free trial • No credit card required
+            30-day money-back guarantee • Cancel anytime
           </p>
-          <Link 
-            to="/onboarding" 
+          <Link
+            to="/onboarding"
             className="inline-block px-8 py-3 bg-white text-orange-600 rounded-full font-medium"
           >
-            Start Free Trial
+            Get Started
           </Link>
         </div>
       </section>

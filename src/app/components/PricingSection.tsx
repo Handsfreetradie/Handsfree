@@ -397,8 +397,8 @@ export function PricingSection() {
               answer: "Yep. Upgrade or downgrade whenever you like. No penalties, no questions asked.",
             },
             {
-              question: "What happens after the free trial?",
-              answer: "Your trial lasts 14 days. After that, you'll be charged for your chosen plan. Cancel anytime before and you won't pay a cent.",
+              question: "What's the money-back guarantee?",
+              answer: "If you're not happy in the first 30 days, we'll give you a full refund. No questions asked.",
             },
             {
               question: "Do I need a new phone number?",

@@ -151,7 +151,7 @@ export function MobileFeatures() {
             to="/onboarding" 
             className="inline-block px-8 py-3 bg-white text-orange-600 rounded-full font-medium"
           >
-            Start Free Trial
+            Get Started
           </Link>
         </div>
       </section>

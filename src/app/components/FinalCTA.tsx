@@ -23,11 +23,10 @@ export function FinalCTA() {
           </h2>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
             Join thousands of businesses using AI to never miss a customer again.
-            Start free, no credit card required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/onboarding" className="group px-8 py-4 bg-gray-900 text-white rounded-full text-lg hover:bg-gray-800 transition-all hover:scale-105 shadow-lg flex items-center gap-2">
-              Start Free Trial
+              Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link to="/contact" className="px-8 py-4 bg-white text-gray-900 rounded-full text-lg border-2 border-gray-200 hover:border-orange-500 hover:text-orange-500 transition-all">
@@ -35,7 +34,7 @@ export function FinalCTA() {
             </Link>
           </div>
           <p className="text-sm text-gray-500 mt-6">
-            14-day free trial • Cancel anytime • No credit card required
+            30-day money-back guarantee • Cancel anytime
           </p>
         </motion.div>
       </div>

@@ -165,13 +165,13 @@ export function MobileHome() {
         <div className="text-center">
           <h2 className="text-2xl mb-4">Ready to get started?</h2>
           <p className="text-orange-50 mb-6 text-sm">
-            14-day free trial • No credit card required
+            30-day money-back guarantee • Cancel anytime
           </p>
-          <Link 
-            to="/onboarding" 
+          <Link
+            to="/onboarding"
             className="inline-block px-8 py-3 bg-white text-orange-600 rounded-full font-medium"
           >
-            Start Free Trial
+            Get Started
           </Link>
         </div>
       </section>

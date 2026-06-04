@@ -43,7 +43,7 @@ export function Onboarding() {
     
     // Send email notification to hello@handsfreetradie.com.au
     const emailBody = `
-New Handsfree Trial Signup
+New Handsfree Signup
 
 Personal Information:
 - Name: ${formData.firstName} ${formData.lastName}
@@ -68,7 +68,7 @@ Date: ${new Date().toLocaleString()}
       },
       body: JSON.stringify({
         access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with your Web3Forms access key
-        subject: `New Trial Signup: ${formData.firstName} ${formData.lastName} - ${formData.company}`,
+        subject: `New Signup: ${formData.firstName} ${formData.lastName} - ${formData.company}`,
         from_name: 'Handsfree Website',
         to: 'hello@handsfreetradie.com.au',
         message: emailBody,
@@ -205,7 +205,7 @@ Date: ${new Date().toLocaleString()}
         >
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl mb-6 text-gray-900">
-              Start your <span className="text-orange-500">free trial</span>
+              Get started with <span className="text-orange-500">Handsfree</span>
             </h1>
             <p className="text-xl text-gray-600">
               Get your AI receptionist up and running in minutes
@@ -429,7 +429,7 @@ Date: ${new Date().toLocaleString()}
                     className="px-8 py-4 bg-orange-500 text-white rounded-full text-lg hover:bg-orange-600 transition-all hover:scale-105 shadow-lg"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Submitting..." : "Start Free Trial"}
+                    {isSubmitting ? "Submitting..." : "Get Started"}
                   </button>
                 </div>
               </motion.div>
