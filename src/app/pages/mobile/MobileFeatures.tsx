@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { PhoneCall, CalendarCheck, Clock, ClipboardList, MessageSquare, Mic, ArrowLeft, ChevronRight } from "lucide-react";
+import { PhoneCall, CalendarCheck, Clock, ClipboardList, MessageSquare, Mic, ArrowLeft, ChevronRight, Zap, CheckCircle, Menu } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
 
 const features = [
@@ -167,19 +167,19 @@ export function MobileFeatures() {
           </Link>
           <Link to="/mobile/features" className="text-orange-500 text-xs flex flex-col items-center gap-1">
             <div className="w-6 h-6 bg-orange-100 rounded-lg flex items-center justify-center">
-              <Brain className="w-4 h-4" />
+              <Zap className="w-4 h-4" />
             </div>
             <span>Features</span>
           </Link>
           <Link to="/mobile/pricing" className="text-gray-500 text-xs flex flex-col items-center gap-1">
             <div className="w-6 h-6 rounded-lg flex items-center justify-center">
-              <BarChart className="w-4 h-4" />
+              <CheckCircle className="w-4 h-4" />
             </div>
             <span>Pricing</span>
           </Link>
           <Link to="/mobile/more" className="text-gray-500 text-xs flex flex-col items-center gap-1">
             <div className="w-6 h-6 rounded-lg flex items-center justify-center">
-              <Workflow className="w-4 h-4" />
+              <Menu className="w-4 h-4" />
             </div>
             <span>More</span>
           </Link>
