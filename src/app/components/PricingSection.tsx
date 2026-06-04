@@ -127,97 +127,6 @@ export function PricingSection() {
         </motion.div>
       </div>
 
-      {/* Pricing Cards */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {plans.map((plan, index) => (
-            <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative bg-white rounded-2xl p-8 border-2 transition-all hover:shadow-xl flex flex-col ${
-                plan.popular
-                  ? "border-orange-500 shadow-lg"
-                  : "border-gray-200"
-              }`}
-            >
-              {/* Popular Badge */}
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-1 rounded-full text-sm whitespace-nowrap">
-                  Most Popular
-                </div>
-              )}
-
-              {/* Icon */}
-              <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6">
-                <plan.icon className="w-6 h-6 text-white" />
-              </div>
-
-              {/* Plan Name & Tagline */}
-              <h3 className="text-2xl text-gray-900 mb-2">{plan.name}</h3>
-              <p className="text-gray-600 mb-1">{plan.tagline}</p>
-              <p className="text-sm text-gray-500 mb-6">{plan.description}</p>
-
-              {/* Price */}
-              <div className="mb-8">
-                {plan.monthlyPrice ? (
-                  <div>
-                    <div className="flex items-baseline gap-1 mb-2">
-                      <span className="text-5xl text-gray-900">
-                        ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                      </span>
-                      <span className="text-xl text-gray-600">/mo</span>
-                    </div>
-                    {isAnnual && (
-                      <p className="text-sm text-gray-500">
-                        ${(plan.annualPrice! * 12).toLocaleString()} AUD billed annually
-                      </p>
-                    )}
-                  </div>
-                ) : (
-                  <div className="text-3xl text-gray-900 mb-4">Custom pricing</div>
-                )}
-              </div>
-
-              {/* Features */}
-              <ul className="space-y-3 mb-8 flex-grow">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <Link
-                to="/onboarding"
-                className={`block w-full text-center py-3 rounded-full transition-all ${
-                  plan.popular
-                    ? "bg-orange-500 text-white hover:bg-orange-600"
-                    : "bg-gray-900 text-white hover:bg-gray-800"
-                }`}
-              >
-                {plan.cta}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Social Proof */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-600 text-lg">
-            Trusted by <span className="text-gray-900">500+ Australian businesses</span>
-          </p>
-        </motion.div>
-      </div>
-
       {/* Cost Comparison Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-24">
         <motion.div
@@ -371,6 +280,97 @@ export function PricingSection() {
             That's over <span className="text-orange-600">$28,000 saved</span> in your first year
           </p>
           <p className="text-gray-600 mt-2">Plus you never miss a lead, even at 3am on Christmas Day</p>
+        </motion.div>
+      </div>
+
+      {/* Pricing Cards */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {plans.map((plan, index) => (
+            <motion.div
+              key={plan.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`relative bg-white rounded-2xl p-8 border-2 transition-all hover:shadow-xl flex flex-col ${
+                plan.popular
+                  ? "border-orange-500 shadow-lg"
+                  : "border-gray-200"
+              }`}
+            >
+              {/* Popular Badge */}
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-1 rounded-full text-sm whitespace-nowrap">
+                  Most Popular
+                </div>
+              )}
+
+              {/* Icon */}
+              <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6">
+                <plan.icon className="w-6 h-6 text-white" />
+              </div>
+
+              {/* Plan Name & Tagline */}
+              <h3 className="text-2xl text-gray-900 mb-2">{plan.name}</h3>
+              <p className="text-gray-600 mb-1">{plan.tagline}</p>
+              <p className="text-sm text-gray-500 mb-6">{plan.description}</p>
+
+              {/* Price */}
+              <div className="mb-8">
+                {plan.monthlyPrice ? (
+                  <div>
+                    <div className="flex items-baseline gap-1 mb-2">
+                      <span className="text-5xl text-gray-900">
+                        ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                      </span>
+                      <span className="text-xl text-gray-600">/mo</span>
+                    </div>
+                    {isAnnual && (
+                      <p className="text-sm text-gray-500">
+                        ${(plan.annualPrice! * 12).toLocaleString()} AUD billed annually
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <div className="text-3xl text-gray-900 mb-4">Custom pricing</div>
+                )}
+              </div>
+
+              {/* Features */}
+              <ul className="space-y-3 mb-8 flex-grow">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTA */}
+              <Link
+                to="/onboarding"
+                className={`block w-full text-center py-3 rounded-full transition-all ${
+                  plan.popular
+                    ? "bg-orange-500 text-white hover:bg-orange-600"
+                    : "bg-gray-900 text-white hover:bg-gray-800"
+                }`}
+              >
+                {plan.cta}
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Social Proof */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <p className="text-gray-600 text-lg">
+            Trusted by <span className="text-gray-900">500+ Australian businesses</span>
+          </p>
         </motion.div>
       </div>
 
