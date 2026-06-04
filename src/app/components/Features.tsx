@@ -1,39 +1,38 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { Brain, Globe, Clock, Workflow, BarChart, Headphones } from "lucide-react";
-import { CRMCarousel } from "./CRMCarousel";
+import { PhoneCall, CalendarCheck, Clock, ClipboardList, MessageSquare, Mic } from "lucide-react";
 
 const features = [
   {
-    icon: Brain,
-    title: "Natural Conversations",
-    description: "Advanced AI that understands context, intent, and responds like a real person.",
+    icon: PhoneCall,
+    title: "Answers Every Call",
+    description: "When you're on the tools, under a house, or up a pole, your AI picks up. No missed leads while you're working.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Books Jobs Straight In",
+    description: "Customers pick a time and it lands straight in your calendar. No back-and-forth, no double-bookings.",
   },
   {
     icon: Clock,
-    title: "24/7 Availability",
-    description: "Never close. Your AI receptionist works around the clock, every day of the year.",
+    title: "Always On — Even at 3am",
+    description: "Emergency calls, weekend enquiries, after-hours leads. All answered, all captured, every day of the year.",
   },
   {
-    icon: Globe,
-    title: "Multi-Language Support",
-    description: "Communicate with customers in their preferred language, automatically.",
+    icon: ClipboardList,
+    title: "Captures the Job Details",
+    description: "Name, number, address, and what's wrong. Everything you need before you call them back.",
   },
   {
-    icon: Workflow,
-    title: "Custom Business Logic",
-    description: "Build custom workflows and automations tailored to your unique business needs.",
+    icon: MessageSquare,
+    title: "Instant SMS Text-Back",
+    description: "Miss a call? They get an instant text to keep the lead warm while you finish the job.",
   },
   {
-    icon: BarChart,
-    title: "Real-Time Analytics",
-    description: "Track call metrics, customer sentiment, and business insights in real-time.",
-  },
-  {
-    icon: Headphones,
-    title: "Seamless Transfers",
-    description: "Smart routing to your team when human interaction is needed.",
+    icon: Mic,
+    title: "Sounds Like Your Business",
+    description: "Answers in your business name with a greeting you set. Professional every single time.",
   },
 ];
 
@@ -56,7 +55,7 @@ export function Features() {
             <span className="text-gray-400">Nothing you don't.</span>
           </h2>
           <p className="text-base sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto px-4">
-            Built for modern businesses who demand excellence
+            Built for tradies who are tired of losing jobs to a missed call
           </p>
         </motion.div>
 
@@ -79,9 +78,6 @@ export function Features() {
             </motion.div>
           ))}
         </div>
-        
-        {/* CRM Integrations Carousel */}
-        <CRMCarousel />
       </div>
     </section>
   );

@@ -1,24 +1,35 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Brain, Globe, Clock, Workflow, BarChart, Headphones, ArrowLeft, ChevronRight } from "lucide-react";
+import { PhoneCall, CalendarCheck, Clock, ClipboardList, MessageSquare, Mic, ArrowLeft, ChevronRight } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
 
 const features = [
   {
-    icon: Brain,
-    title: "Natural Conversations",
-    description: "Advanced AI that understands context and responds like a real person.",
+    icon: PhoneCall,
+    title: "Answers Every Call",
+    description: "When you're on the tools, under a house, or up a pole, your AI picks up.",
     details: [
-      "Understands Australian slang and accents",
-      "Context-aware responses",
-      "Natural conversation flow",
-      "Learns from each interaction",
+      "Never miss a lead while you're working",
+      "Answers in your business name",
+      "Professional every time",
+      "Works on your existing number",
+    ],
+  },
+  {
+    icon: CalendarCheck,
+    title: "Books Jobs Straight In",
+    description: "Customers pick a time and it lands straight in your calendar.",
+    details: [
+      "Cal.com calendar integration",
+      "No back-and-forth with customers",
+      "No double-bookings",
+      "Sends customer a confirmation",
     ],
   },
   {
     icon: Clock,
-    title: "24/7 Availability",
-    description: "Never close. Your AI receptionist works around the clock.",
+    title: "Always On — Even at 3am",
+    description: "Emergency calls, weekend enquiries, after-hours leads. All captured.",
     details: [
       "After-hours coverage included",
       "Weekend & public holiday support",
@@ -27,47 +38,36 @@ const features = [
     ],
   },
   {
-    icon: Globe,
-    title: "Multi-Language Support",
-    description: "Communicate with customers in their preferred language.",
+    icon: ClipboardList,
+    title: "Captures the Job Details",
+    description: "Name, number, address, and what's wrong — ready when you finish the job.",
     details: [
-      "English, Mandarin, Spanish & more",
-      "Automatic language detection",
-      "Professional translations",
-      "Cultural context awareness",
+      "Customer name and contact number",
+      "Job address and description",
+      "Urgency level captured",
+      "Sent straight to you after every call",
     ],
   },
   {
-    icon: Workflow,
-    title: "Custom Workflows",
-    description: "Build automations tailored to your business needs.",
+    icon: MessageSquare,
+    title: "Instant SMS Text-Back",
+    description: "Miss a call? They get an instant text to keep the lead warm.",
     details: [
-      "Custom call routing rules",
-      "Appointment booking flows",
-      "FAQ automation",
-      "CRM integration",
+      "100–400 SMS/month included",
+      "Automatic reply within seconds",
+      "Keeps leads warm while you work",
+      "Custom message in your voice",
     ],
   },
   {
-    icon: BarChart,
-    title: "Real-Time Analytics",
-    description: "Track call metrics and business insights in real-time.",
+    icon: Mic,
+    title: "Sounds Like Your Business",
+    description: "Answers in your business name with a greeting you set.",
     details: [
-      "Call volume tracking",
-      "Customer sentiment analysis",
-      "Peak time identification",
-      "Conversion metrics",
-    ],
-  },
-  {
-    icon: Headphones,
-    title: "Seamless Transfers",
-    description: "Smart routing to your team when human interaction is needed.",
-    details: [
-      "VIP caller detection",
-      "Skill-based routing",
-      "Warm transfer with context",
-      "Emergency call escalation",
+      "Custom greeting and business name",
+      "Sounds professional every time",
+      "Set your own call handling rules",
+      "You control when it answers",
     ],
   },
 ];
