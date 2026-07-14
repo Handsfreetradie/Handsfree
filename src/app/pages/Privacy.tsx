@@ -230,7 +230,7 @@ export function Privacy() {
                     </li>
                   </ul>
                   <p className="text-gray-700 leading-relaxed mt-6">
-                    To exercise any of these rights, email us at <a href="mailto:privacy@handsfree.com.au" className="text-orange-500 hover:underline">hello@handsfree.com.au</a>. 
+                    To exercise any of these rights, email us at <a href="mailto:hello@handsfreetradie.com.au" className="text-orange-500 hover:underline">hello@handsfreetradie.com.au</a>. 
                     We'll respond within 30 days.
                   </p>
                 </div>

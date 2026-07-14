@@ -11,21 +11,24 @@ export function InquiryForm() {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // In production, this would send to your backend API endpoint
-    // Example: fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
-    
-    // For now, create a mailto link as fallback
-    const mailtoLink = `mailto:hello@handsfreetradie.com.au?subject=Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ACompany: ${formData.company}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-    window.location.href = mailtoLink;
-    
-    // Show success message
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/send-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "contact", ...formData }),
+      });
+
+      if (!response.ok) throw new Error("Send failed");
+
+      setIsSubmitted(true);
       setFormData({
         name: "",
         email: "",
@@ -33,7 +36,14 @@ export function InquiryForm() {
         company: "",
         message: "",
       });
-    }, 3000);
+    } catch (error) {
+      console.error("Error sending enquiry:", error);
+      setSubmitError(
+        "Something went wrong sending your message. Please try again, or email us directly at hello@handsfreetradie.com.au"
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -83,15 +93,8 @@ export function InquiryForm() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl text-gray-900 mb-2">Almost there!</h3>
-              <p className="text-gray-600">
-                Your email app has opened with your message ready to go — just hit send.
-                <br />
-                Didn't open? Email us directly at{" "}
-                <a href="mailto:hello@handsfreetradie.com.au" className="text-orange-500 hover:underline">
-                  hello@handsfreetradie.com.au
-                </a>
-              </p>
+              <h3 className="text-2xl text-gray-900 mb-2">Thank you!</h3>
+              <p className="text-gray-600">We've received your message and will get back to you soon.</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -175,11 +178,16 @@ export function InquiryForm() {
                 />
               </div>
 
+              {submitError && (
+                <p className="text-red-500 text-sm text-center">{submitError}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full group px-8 py-4 bg-gray-900 text-white rounded-full text-lg hover:bg-gray-800 transition-all hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className="w-full group px-8 py-4 bg-gray-900 text-white rounded-full text-lg hover:bg-gray-800 transition-all hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 

@@ -479,7 +479,7 @@ export function Terms() {
                 If anything in these terms is unclear or you have questions, we're happy to help:
               </p>
               <p className="text-gray-700">
-                <strong>Email:</strong> <a href="mailto:legal@handsfree.com.au" className="text-orange-500 hover:underline">legal@handsfree.com.au</a><br />
+                <strong>Email:</strong> <a href="mailto:hello@handsfreetradie.com.au" className="text-orange-500 hover:underline">hello@handsfreetradie.com.au</a><br />
                 <strong>Phone:</strong> [To Be Added]<br />
                 <strong>Address:</strong> Handsfree Pty Ltd, Sydney, NSW, Australia
               </p>

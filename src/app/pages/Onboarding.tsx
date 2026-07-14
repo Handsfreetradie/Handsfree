@@ -17,6 +17,7 @@ export function Onboarding() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
@@ -37,64 +38,29 @@ export function Onboarding() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Send email notification to hello@handsfreetradie.com.au
-    const emailBody = `
-New Handsfree Signup
+    setSubmitError("");
 
-Personal Information:
-- Name: ${formData.firstName} ${formData.lastName}
-- Email: ${formData.email}
-- Phone: ${formData.phone}
+    try {
+      const response = await fetch("/api/send-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "signup", ...formData }),
+      });
 
-Business Information:
-- Company: ${formData.company}
-- Job Title: ${formData.jobTitle}
-- Business Type: ${formData.businessType}
-- Call Volume: ${formData.callVolume}
+      if (!response.ok) throw new Error("Send failed");
 
-Date: ${new Date().toLocaleString()}
-    `.trim();
-
-    // Using fetch to send email via Web3Forms
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with your Web3Forms access key
-        subject: `New Signup: ${formData.firstName} ${formData.lastName} - ${formData.company}`,
-        from_name: 'Handsfree Website',
-        to: 'hello@handsfreetradie.com.au',
-        message: emailBody,
-        // Include form data as separate fields for better organization
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        company: formData.company,
-        jobTitle: formData.jobTitle,
-        businessType: formData.businessType,
-        callVolume: formData.callVolume,
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Form submitted successfully:', formData);
       setSubmitted(true);
+    } catch (error) {
+      console.error("Error sending signup:", error);
+      setSubmitError(
+        "Something went wrong sending your details. Please try again, or email us directly at hello@handsfreetradie.com.au"
+      );
+    } finally {
       setIsSubmitting(false);
-    })
-    .catch(error => {
-      console.error('Error sending email:', error);
-      // Still show success to user even if email fails
-      setSubmitted(true);
-      setIsSubmitting(false);
-    });
+    }
   };
 
   if (submitted) {
@@ -415,6 +381,10 @@ Date: ${new Date().toLocaleString()}
                     <option value="100+">100+ calls</option>
                   </select>
                 </div>
+
+                {submitError && (
+                  <p className="text-red-500 text-sm text-center pt-4">{submitError}</p>
+                )}
 
                 <div className="flex justify-between pt-6">
                   <button

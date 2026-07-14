@@ -358,9 +358,9 @@ export function Security() {
                     If you have security questions, concerns, or need to report a vulnerability, our security team is here to help:
                   </p>
                   <div className="space-y-2 text-gray-700">
-                    <p><strong>Security inquiries:</strong> <a href="mailto:security@handsfree.com.au" className="text-orange-500 hover:underline">security@handsfree.com.au</a></p>
-                    <p><strong>Vulnerability reports:</strong> <a href="mailto:security@handsfree.com.au" className="text-orange-500 hover:underline">security@handsfree.com.au</a></p>
-                    <p><strong>Privacy questions:</strong> <a href="mailto:privacy@handsfree.com.au" className="text-orange-500 hover:underline">privacy@handsfree.com.au</a></p>
+                    <p><strong>Security inquiries:</strong> <a href="mailto:hello@handsfreetradie.com.au" className="text-orange-500 hover:underline">hello@handsfreetradie.com.au</a></p>
+                    <p><strong>Vulnerability reports:</strong> <a href="mailto:hello@handsfreetradie.com.au" className="text-orange-500 hover:underline">hello@handsfreetradie.com.au</a></p>
+                    <p><strong>Privacy questions:</strong> <a href="mailto:hello@handsfreetradie.com.au" className="text-orange-500 hover:underline">hello@handsfreetradie.com.au</a></p>
                   </div>
                   <p className="text-sm text-gray-600 mt-4">
                     We respond to all security reports within 24 hours and maintain confidentiality throughout the disclosure process.

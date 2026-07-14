@@ -19,16 +19,12 @@ export function MobileContact() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/send-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_KEY",
-          ...formData,
-          subject: "New Contact Form Submission from Handsfree Mobile",
-        }),
+        body: JSON.stringify({ formType: "contact", ...formData }),
       });
 
       if (response.ok) {
@@ -84,7 +80,7 @@ export function MobileContact() {
       <section className="px-6 pb-6">
         <div className="space-y-3">
           <a
-            href="mailto:hello@handsfree.com.au"
+            href="mailto:hello@handsfreetradie.com.au"
             className="bg-gray-50 rounded-xl p-4 flex items-center gap-3 border border-gray-200"
           >
             <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
@@ -92,7 +88,7 @@ export function MobileContact() {
             </div>
             <div>
               <h3 className="text-sm font-medium text-gray-900">Email</h3>
-              <p className="text-sm text-gray-600">hello@handsfree.com.au</p>
+              <p className="text-sm text-gray-600">hello@handsfreetradie.com.au</p>
             </div>
           </a>
 
