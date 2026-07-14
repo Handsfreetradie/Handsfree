@@ -1,23 +1,23 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { Phone, Settings, Zap } from "lucide-react";
+import { Settings, ToggleRight, Eye } from "lucide-react";
 
 const steps = [
   {
     icon: Settings,
-    title: "1. Set Up in Minutes",
-    description: "Connect your phone number and customize your AI receptionist's voice and responses.",
+    title: "1. Customise Your AI",
+    description: "Set your own rules. Choose when the AI answers — business hours, after-hours, or never. Set what it says. You decide everything.",
   },
   {
-    icon: Phone,
-    title: "2. Go Live Instantly",
-    description: "Your AI starts answering calls immediately. No training required, no hardware needed.",
+    icon: ToggleRight,
+    title: "2. Turn It On When You Need It",
+    description: "Flip it on when you're busy. Answer calls yourself anytime. Full control, always. No lock-in.",
   },
   {
-    icon: Zap,
-    title: "3. Watch It Work",
-    description: "Monitor calls in real-time, get transcripts, and insights through your dashboard.",
+    icon: Eye,
+    title: "3. Monitor & Adjust Anytime",
+    description: "Watch every call in real-time. Adjust responses instantly. Get transcripts. You're always in the driver's seat.",
   },
 ];
 
@@ -35,10 +35,10 @@ export function HowItWorks() {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 text-gray-900 px-2">
-            Get started in <span className="text-orange-500">three steps</span>
+            You're in <span className="text-orange-500">control.</span> Setup takes 5 minutes.
           </h2>
           <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-            From signup to your first answered call in under 5 minutes
+            Set your rules. Flip it on. You're always in charge.
           </p>
         </motion.div>
 
