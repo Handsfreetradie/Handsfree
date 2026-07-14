@@ -48,7 +48,7 @@ export function Hero({ onDemoClick }: { onDemoClick: () => void }) {
             transition={{ delay: 0.4 }}
             className="text-base sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4"
           >
-            We don't sell you a tool and leave you to figure it out. We build a custom AI solution
+            We don't sell you a tool and leave you to figure it out. We build a custom digital receptionist
             around how your trade works — and we actively monitor and improve it over time.
           </motion.p>
 
@@ -119,7 +119,7 @@ export function Hero({ onDemoClick }: { onDemoClick: () => void }) {
                 <Phone className="w-10 sm:w-12 h-10 sm:h-12 text-white" />
               </motion.div>
               <p className="text-gray-600 text-xs sm:text-sm mb-2">Incoming Call</p>
-              <h3 className="text-xl sm:text-2xl text-gray-900 mb-1">Handsfree AI</h3>
+              <h3 className="text-xl sm:text-2xl text-gray-900 mb-1">Your Receptionist</h3>
               <p className="text-gray-500 text-xs sm:text-sm">Your Business Assistant</p>
             </div>
           </motion.div>

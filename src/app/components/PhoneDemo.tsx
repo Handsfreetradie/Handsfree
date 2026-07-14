@@ -4,6 +4,17 @@ import { Phone, PhoneOff, Volume2, Mic, MicOff } from "lucide-react";
 import { RetellWebClient } from "retell-client-js-sdk";
 import { RETELL_CONFIG } from "../config/retell";
 
+const DEMO_LIMIT = 2;
+const DEMO_COUNT_KEY = "handsfree_demo_count";
+
+function getDemoCount() {
+  return parseInt(localStorage.getItem(DEMO_COUNT_KEY) || "0", 10);
+}
+
+function incrementDemoCount() {
+  localStorage.setItem(DEMO_COUNT_KEY, String(getDemoCount() + 1));
+}
+
 export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [callState, setCallState] = useState<"incoming" | "active" | "ended">("incoming");
   const [callDuration, setCallDuration] = useState(0);
@@ -43,6 +54,10 @@ export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
   };
 
   const handleAccept = async () => {
+    if (getDemoCount() >= DEMO_LIMIT) {
+      setError("You've used your 2 demo calls. Book a call with us to get your own receptionist set up.");
+      return;
+    }
     setIsConnecting(true);
     setError("");
 
@@ -70,6 +85,7 @@ export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
         await retellClient.current.startCall({
           accessToken: data.access_token,
         });
+        incrementDemoCount();
       }
     } catch (err) {
       console.error("Error starting call:", err);
@@ -190,7 +206,7 @@ export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
                 >
                   <div className="text-center">
                     <p className="text-sm text-gray-400 mb-2">Demo Call</p>
-                    <h3 className="text-3xl mb-2">Handsfree AI</h3>
+                    <h3 className="text-3xl mb-2">Your Receptionist</h3>
                     <p className="text-gray-400">Receptionist</p>
                     {error && (
                       <p className="text-red-400 text-sm mt-4 px-4">{error}</p>
@@ -245,7 +261,7 @@ export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
                   className="h-full flex flex-col items-center justify-between py-16 px-6"
                 >
                   <div className="text-center">
-                    <h3 className="text-3xl mb-2">Handsfree AI</h3>
+                    <h3 className="text-3xl mb-2">Your Receptionist</h3>
                     <p className="text-green-400 text-sm mb-4">{formatTime(callDuration)}</p>
                     
                     {/* Animated sound wave */}

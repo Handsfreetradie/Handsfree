@@ -34,7 +34,7 @@ export function PricingSection() {
       icon: Phone,
       features: [
         "Everything in Essentials",
-        "AI answers calls in your business name",
+        "Your digital receptionist answers calls in your business name",
         "150 mins of call answering + 150 SMS/month",
         "Captures job type, address, and urgency every time",
         "24/7 after-hours answering",
@@ -408,8 +408,8 @@ export function PricingSection() {
               answer: "Get in touch and we'll sort something out. Pro includes 400 mins + 400 SMS which covers most busy tradies. For bigger operations, Custom pricing is available.",
             },
             {
-              question: "Can I bypass the AI for important callers?",
-              answer: "Absolutely. Set up VIP numbers that ring straight through to you, skipping the AI completely. Perfect for family, key clients, or urgent contacts.",
+              question: "Can I bypass your receptionist for important callers?",
+              answer: "Absolutely. Set up VIP numbers that ring straight through to you, skipping your receptionist completely. Perfect for family, key clients, or urgent contacts.",
             },
           ].map((faq, index) => (
             <motion.div

@@ -51,7 +51,7 @@ export function MobileAbout() {
               their phones while working.
             </p>
             <p>
-              We built Handsfree to be the AI receptionist that sounds human, understands 
+              We built Handsfree to be the digital receptionist that sounds human, understands 
               Australian slang, and never misses a beat — even at 3am on Christmas Day.
             </p>
             <p>
@@ -139,7 +139,7 @@ export function MobileAbout() {
         <div className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-200">
           <h2 className="text-2xl text-gray-900 mb-3">Join us on our mission</h2>
           <p className="text-sm text-gray-600 mb-6">
-            Start capturing every lead with your AI receptionist
+            Start capturing every lead with your digital receptionist
           </p>
           <Link 
             to="/onboarding" 

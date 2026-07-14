@@ -26,7 +26,7 @@ export function DemoCallSection({ onDemoClick }: { onDemoClick: () => void }) {
               <span className="text-orange-500">yourself</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Try our live demo to hear how natural and responsive your AI receptionist can be. 
+              Try our live demo to hear how natural and responsive your digital receptionist can be.
               It's like talking to a real person.
             </p>
             <button

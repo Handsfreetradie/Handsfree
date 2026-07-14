@@ -36,7 +36,7 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            We're on a mission to help businesses never miss another call, powered by cutting-edge AI technology.
+            We're on a mission to help businesses never miss another call, built around how your trade works.
           </motion.p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export function About() {
                 Every missed call is a missed invoice. We're here to make sure that never happens again.
               </p>
               <p className="text-lg text-gray-600">
-                Handsfree is not another generic AI receptionist. It's a fully customisable AI solution built 
+                Handsfree is not another generic digital receptionist. It's a fully customisable solution built 
                 around how your business actually runs — your hours, your customers, your language, your rules.
               </p>
             </motion.div>
@@ -127,8 +127,8 @@ export function About() {
                 next number on Google if you don't pick up, neither option cuts it anymore.
               </p>
               <p>
-                We combined AI, natural language processing, and voice technology to build something different — 
-                an AI receptionist that listens, understands, and handles calls exactly the way you'd want them 
+                We combined voice technology and deep customisation to build something different — 
+                a digital receptionist that listens, understands, and handles calls exactly the way you'd want them 
                 handled. Not a robot. Not a script. A smart, flexible solution that learns your business.
               </p>
               <p>

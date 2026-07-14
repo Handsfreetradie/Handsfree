@@ -9,7 +9,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <img src={logo} alt="Handsfree" className="h-32 sm:h-40 w-auto mb-4 object-contain" />
             <p className="text-sm text-gray-400 leading-relaxed">
-              The AI phone receptionist that never sleeps.
+              The digital receptionist that never sleeps.
             </p>
           </div>
 

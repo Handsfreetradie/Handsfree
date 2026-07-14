@@ -7,7 +7,7 @@ const features = [
   {
     icon: PhoneCall,
     title: "Answers Every Call",
-    description: "When you're on the tools, under a house, or up a pole, your AI picks up.",
+    description: "When you're on the tools, under a house, or up a pole, your receptionist picks up.",
     details: [
       "Never miss a lead while you're working",
       "Answers in your business name",

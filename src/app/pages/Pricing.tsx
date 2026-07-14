@@ -27,14 +27,14 @@ export function Pricing() {
     },
     {
       name: "Receptionist",
-      tagline: "AI voice receptionist",
+      tagline: "digital receptionist",
       description: "Best for small businesses wanting a professional front line",
       monthlyPrice: 149,
       annualPrice: 119,
       icon: Phone,
       features: [
         "Everything in Essentials",
-        "AI voice receptionist answers calls live",
+        "digital receptionist answers calls live",
         "Handles FAQs automatically",
         "24/7 after-hours coverage",
         "Up to 200 minutes of calls per month",
@@ -451,8 +451,8 @@ export function Pricing() {
                 answer: "On Essentials and Receptionist plans, extra minutes are $0.50/min. Or upgrade to Pro for unlimited calls.",
               },
               {
-                question: "Can I bypass the AI for important callers?",
-                answer: "Absolutely. Set up VIP numbers that ring straight through to you, skipping the AI completely. Perfect for family, key clients, or urgent contacts.",
+                question: "Can I bypass your receptionist for important callers?",
+                answer: "Absolutely. Set up VIP numbers that ring straight through to you, skipping your receptionist completely. Perfect for family, key clients, or urgent contacts.",
               },
             ].map((faq, index) => (
               <motion.div

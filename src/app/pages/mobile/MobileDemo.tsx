@@ -10,7 +10,7 @@ export function MobileDemo() {
   const [currentCaption, setCurrentCaption] = useState(0);
 
   const captions = [
-    "G'day! This is Handsfree AI calling on behalf of Jake's Plumbing. How can I help you today?",
+    "G'day! This is Handsfree calling on behalf of Jake's Plumbing. How can I help you today?",
     "I can help you book an appointment, answer questions about our services, or connect you with Jake directly.",
     "What day works best for you? We have availability Tuesday and Thursday this week.",
     "Perfect! I've booked you in for Thursday at 2pm. You'll receive a confirmation SMS shortly.",
@@ -78,7 +78,7 @@ export function MobileDemo() {
               </motion.div>
 
               <h2 className="text-3xl mb-2">Incoming Call</h2>
-              <p className="text-xl text-gray-300 mb-1">Handsfree AI</p>
+              <p className="text-xl text-gray-300 mb-1">Handsfree</p>
               <p className="text-sm text-gray-400 mb-12">Demo Call</p>
 
               {/* Action Buttons */}
@@ -113,7 +113,7 @@ export function MobileDemo() {
                 <Phone className="w-12 h-12 text-white" />
               </motion.div>
 
-              <h2 className="text-2xl mb-1">Handsfree AI</h2>
+              <h2 className="text-2xl mb-1">Handsfree</h2>
               <p className="text-sm text-gray-400 mb-6">{formatTime(callDuration)}</p>
 
               {/* Sound Wave Animation */}
@@ -180,7 +180,7 @@ export function MobileDemo() {
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-700 text-left">
                 <h3 className="text-sm text-gray-400 mb-3">Call Summary</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
-                  <li>• AI handled initial greeting</li>
+                  <li>• Receptionist handled initial greeting</li>
                   <li>• Customer inquiry answered</li>
                   <li>• Appointment booked successfully</li>
                   <li>• Confirmation SMS sent</li>

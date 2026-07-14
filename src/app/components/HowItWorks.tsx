@@ -11,13 +11,13 @@ const steps = [
   },
   {
     icon: Wrench,
-    title: "2. We Build Your Custom AI",
-    description: "We configure your AI from scratch based on how you actually run your business. Not a generic template — your setup, built for you.",
+    title: "2. We Build Your Digital Receptionist",
+    description: "We configure your receptionist from scratch based on how you actually run your business. Not a generic template — your setup, built for you.",
   },
   {
     icon: TrendingUp,
     title: "3. We Monitor and Keep Improving",
-    description: "We watch how your AI is performing and keep tuning it. If something's not right, we fix it. You get a solution that keeps getting better.",
+    description: "We watch how your receptionist is performing and keep tuning it. If something's not right, we fix it. You get a solution that keeps getting better.",
   },
 ];
 

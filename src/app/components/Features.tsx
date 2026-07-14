@@ -7,7 +7,7 @@ const features = [
   {
     icon: ClipboardList,
     title: "Custom Onboarding Form",
-    description: "Tell us your hours, your trade, your rules. We use this to build your AI correctly from day one — not guess.",
+    description: "Tell us your hours, your trade, your rules. We use this to build your receptionist correctly from day one — not guess.",
   },
   {
     icon: Users,
@@ -17,17 +17,17 @@ const features = [
   {
     icon: Wrench,
     title: "Built From Scratch for You",
-    description: "Your AI is configured around your specific business. Not a generic template you're left to tweak yourself.",
+    description: "Your receptionist is configured around your specific business. Not a generic template you're left to tweak yourself.",
   },
   {
     icon: Search,
     title: "We Monitor Every Call",
-    description: "We actively check how your AI is performing. If it's not handling something right, we catch it and fix it.",
+    description: "We actively check how your receptionist is performing. If it's not handling something right, we catch it and fix it.",
   },
   {
     icon: RefreshCw,
     title: "Ongoing Improvements",
-    description: "Your business changes — we keep your AI sharp. Regular tune-ups included, no extra charge.",
+    description: "Your business changes — we keep your receptionist sharp. Regular tune-ups included, no extra charge.",
   },
   {
     icon: PhoneCall,

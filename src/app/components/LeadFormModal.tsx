@@ -39,6 +39,17 @@ interface LeadFormModalProps {
   onSuccess: () => void;
 }
 
+const DEMO_LIMIT = 2;
+const DEMO_COUNT_KEY = "handsfree_demo_count";
+
+function getDemoCount() {
+  return parseInt(localStorage.getItem(DEMO_COUNT_KEY) || "0", 10);
+}
+
+function incrementDemoCount() {
+  localStorage.setItem(DEMO_COUNT_KEY, String(getDemoCount() + 1));
+}
+
 export function LeadFormModal({ isOpen, onClose, onSuccess }: LeadFormModalProps) {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -51,6 +62,7 @@ export function LeadFormModal({ isOpen, onClose, onSuccess }: LeadFormModalProps
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const demoLimitReached = getDemoCount() >= DEMO_LIMIT;
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -81,6 +93,7 @@ export function LeadFormModal({ isOpen, onClose, onSuccess }: LeadFormModalProps
 
       if (!response.ok) throw new Error("Webhook request failed");
 
+      incrementDemoCount();
       onSuccess();
     } catch {
       setError("Something went wrong. Please try again.");
@@ -123,12 +136,26 @@ export function LeadFormModal({ isOpen, onClose, onSuccess }: LeadFormModalProps
               </div>
               <h2 className="text-2xl mb-1">Get a Live Demo Call</h2>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Enter your details below and we'll start your AI receptionist demo call.
+                Enter your details below and we'll start your digital receptionist demo call.
               </p>
             </div>
 
+            {/* Limit reached state */}
+            {demoLimitReached && (
+              <div className="px-8 py-10 text-center">
+                <p className="text-gray-900 text-lg mb-2">You've used your 2 demo calls.</p>
+                <p className="text-gray-500 text-sm mb-6">Ready to get your own custom receptionist set up? Book a call with us.</p>
+                <a
+                  href="/onboarding"
+                  className="inline-block px-6 py-3 bg-orange-500 text-white rounded-full text-base hover:bg-orange-600 transition-colors"
+                >
+                  Book a Call
+                </a>
+              </div>
+            )}
+
             {/* Form */}
-            <form onSubmit={handleSubmit} className="px-8 py-8 space-y-5">
+            {!demoLimitReached && <form onSubmit={handleSubmit} className="px-8 py-8 space-y-5">
               {/* First + Last Name */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -250,7 +277,7 @@ export function LeadFormModal({ isOpen, onClose, onSuccess }: LeadFormModalProps
                   </>
                 )}
               </button>
-            </form>
+            </form>}
           </motion.div>
         </motion.div>
       )}

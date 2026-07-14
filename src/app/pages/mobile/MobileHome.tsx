@@ -44,7 +44,7 @@ export function MobileHome() {
           </h1>
 
           <p className="text-base text-gray-600 mb-8 leading-relaxed">
-            Your AI phone receptionist that answers every call 24/7
+            Your digital receptionist that answers every call 24/7
           </p>
 
           {/* CTA Buttons */}
@@ -82,7 +82,7 @@ export function MobileHome() {
                 <Phone className="w-10 h-10 text-white" />
               </motion.div>
               <p className="text-gray-600 text-xs mb-2">Incoming Call</p>
-              <h3 className="text-xl text-gray-900 mb-1">Handsfree AI</h3>
+              <h3 className="text-xl text-gray-900 mb-1">Your Receptionist</h3>
               <p className="text-gray-500 text-xs">Your Business Assistant</p>
             </div>
           </motion.div>

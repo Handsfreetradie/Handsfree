@@ -38,7 +38,7 @@ export function SocialProof() {
             Not like the <span className="text-orange-500">rest.</span>
           </h2>
           <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Most AI phone tools take your money and leave you to work it out. We actually stick around.
+            Most of these services take your money and leave you to work it out. We actually stick around.
           </p>
         </motion.div>
 
@@ -50,7 +50,7 @@ export function SocialProof() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gray-50 rounded-3xl p-6 sm:p-8 border border-gray-200"
           >
-            <h3 className="text-xl sm:text-2xl text-gray-400 mb-6">Other AI tools</h3>
+            <h3 className="text-xl sm:text-2xl text-gray-400 mb-6">Other services</h3>
             <ul className="space-y-4">
               {others.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">

@@ -120,7 +120,7 @@ Date: ${new Date().toLocaleString()}
           </h1>
           
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Thank you, {formData.firstName}! We've received your information and will be in touch shortly to set up your AI receptionist.
+            Thank you, {formData.firstName}! We've received your information and will be in touch shortly to set up your digital receptionist.
           </p>
           
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-8">
@@ -141,7 +141,7 @@ Date: ${new Date().toLocaleString()}
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Personalization Call</h4>
-                  <p className="text-gray-600">Our team will contact you to customize your AI receptionist</p>
+                  <p className="text-gray-600">Our team will contact you to customise your digital receptionist</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -208,7 +208,7 @@ Date: ${new Date().toLocaleString()}
               Get started with <span className="text-orange-500">Handsfree</span>
             </h1>
             <p className="text-xl text-gray-600">
-              Get your AI receptionist up and running in minutes
+              Get your digital receptionist up and running in minutes
             </p>
           </div>
 

@@ -27,14 +27,14 @@ export function MobilePricing() {
     },
     {
       name: "Receptionist",
-      tagline: "AI voice receptionist",
+      tagline: "digital receptionist",
       description: "For small businesses wanting a professional front line",
       monthlyPrice: 249,
       annualPrice: 199,
       icon: Phone,
       features: [
         "Everything in Essentials",
-        "AI voice receptionist",
+        "digital receptionist",
         "Up to 200 mins/month",
         "24/7 after-hours coverage",
         "Call transcripts",
