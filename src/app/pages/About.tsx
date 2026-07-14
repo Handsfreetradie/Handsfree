@@ -28,7 +28,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-7xl mb-6"
           >
-            About Handsfree
+            We're Kyle <span className="text-orange-500">&amp;</span> Cassie
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -36,8 +36,49 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            We're on a mission to help businesses never miss another call, built around how your trade works.
+            Not a tech company — a sparky and the woman who used to answer his phone.
           </motion.p>
+        </div>
+      </section>
+
+      {/* Who we are */}
+      <section className="pb-20 px-6">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gray-50 rounded-3xl p-8 border border-gray-200 text-center"
+          >
+            <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-4xl text-white font-bold">K</span>
+            </div>
+            <h3 className="text-2xl text-gray-900 mb-1">Kyle</h3>
+            <p className="text-orange-500 mb-4">Co-founder · Electrician</p>
+            <p className="text-gray-600 leading-relaxed">
+              Still on the tools. Kyle lived the missed-call problem every day — he knows
+              exactly what a tradie needs from a receptionist, because he needed one himself.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-gray-50 rounded-3xl p-8 border border-gray-200 text-center"
+          >
+            <div className="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-4xl text-white font-bold">C</span>
+            </div>
+            <h3 className="text-2xl text-gray-900 mb-1">Cassie</h3>
+            <p className="text-orange-500 mb-4">Co-founder · Marketing &amp; Customers</p>
+            <p className="text-gray-600 leading-relaxed">
+              Cassie answered the calls for Kyle's electrical business — she was the original
+              Handsfree. Now she looks after our marketing and our customers.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -119,21 +160,35 @@ export function About() {
             <h2 className="text-4xl md:text-5xl mb-8 text-center">Our Story</h2>
             <div className="space-y-6 text-lg text-gray-600">
               <p>
-                Handsfree started with a problem every Australian tradie, healthcare provider, and small business 
-                owner knows too well — you can't be on the phone and on the job at the same time.
+                Handsfree didn't start in an office. It started with a phone that wouldn't stop ringing
+                — and no way to answer it.
               </p>
               <p>
-                Call centres cost a fortune. Voicemail gets ignored. And in a world where customers just ring the 
-                next number on Google if you don't pick up, neither option cuts it anymore.
+                Kyle's an electrician. Still is. When you're up a ladder or wiring a switchboard, you
+                can't answer your phone — but the customer calling doesn't know that. They just ring
+                the next number on Google. Every missed call was money walking out the door.
               </p>
               <p>
-                We combined voice technology and deep customisation to build something different — 
-                a digital receptionist that listens, understands, and handles calls exactly the way you'd want them 
-                handled. Not a robot. Not a script. A smart, flexible solution that learns your business.
+                For a long time the fix was Cassie, Kyle's partner, answering his calls between
+                everything else in her day. Customer details, job descriptions, callbacks — she was
+                the receptionist the business needed. And it worked. The jobs stopped slipping away.
               </p>
               <p>
-                From a one-man plumbing operation in Penrith to a multi-location allied health clinic in Brisbane — 
-                Handsfree adapts to you, not the other way around.
+                But even then, the phone ran our lives. Miss a call and you're playing phone tag for
+                two days. Leave it to voicemail and half of them never leave a message — they just
+                call the next sparky. We were tired of missing out on jobs, and tired of missing out
+                on life, because of a phone.
+              </p>
+              <p>
+                And we realised: most tradies don't have a Cassie. So we built one. Handsfree is a
+                digital receptionist that does what Cassie did — answers every call, takes down the
+                job, books it in. And it never misses one because it's asleep, on another job, or
+                trying to have a life.
+              </p>
+              <p>
+                We're not a big company. We're two people solving a problem we actually had. When we
+                say we monitor your setup and keep improving it — that's us, personally. When you
+                call, you get us. And that's exactly how we like it.
               </p>
             </div>
           </motion.div>
@@ -206,9 +261,9 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl mb-6">Ready to join us?</h2>
+            <h2 className="text-4xl md:text-5xl mb-6">Want your own Cassie?</h2>
             <p className="text-xl text-gray-600 mb-8">
-              Experience the future of phone answering for your business
+              Let's build your receptionist together
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button

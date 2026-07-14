@@ -46,17 +46,22 @@ export function MobileAbout() {
           <h2 className="text-2xl text-gray-900 mb-4">Our Story</h2>
           <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
             <p>
-              Handsfree was born from a simple observation: tradies and small businesses 
-              were losing thousands of dollars every month because they couldn't answer 
-              their phones while working.
+              We're Kyle and Cassie — a sparky and the woman who used to answer his phone.
             </p>
             <p>
-              We built Handsfree to be the digital receptionist that sounds human, understands 
-              Australian slang, and never misses a beat — even at 3am on Christmas Day.
+              Kyle's an electrician. Still is. On the tools, you can't answer your phone —
+              and the customer calling just rings the next number on Google. For a long time
+              the fix was Cassie answering his calls between everything else in her day.
+              It worked — the jobs stopped slipping away.
             </p>
             <p>
-              Today, we're proud to serve over 500 Australian businesses, helping them 
-              capture every lead and never miss an opportunity.
+              But most tradies don't have a Cassie. So we built one. A digital receptionist
+              that answers every call, takes down the job, and books it in — even at 3am on
+              Christmas Day.
+            </p>
+            <p>
+              We're not a big company. We're two people solving a problem we actually had.
+              When you call us, you get us.
             </p>
           </div>
         </motion.div>
@@ -129,8 +134,8 @@ export function MobileAbout() {
       <section className="py-8 px-6">
         <h2 className="text-2xl text-gray-900 mb-4 text-center">Built in Australia</h2>
         <p className="text-sm text-gray-600 text-center max-w-md mx-auto leading-relaxed">
-          We're a small team based in Sydney, passionate about helping Aussie businesses 
-          thrive. Every feature we build is tested with real tradies and small business owners.
+          Two Aussies, one electrical business worth of missed calls, and a receptionist
+          we wished existed. Everything we build is tested on real jobs, by a real tradie.
         </p>
       </section>
 
