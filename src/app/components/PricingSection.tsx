@@ -368,7 +368,7 @@ export function PricingSection() {
           className="text-center mt-16"
         >
           <p className="text-gray-600 text-lg">
-            Trusted by <span className="text-gray-900">500+ Australian businesses</span>
+            Built in Australia <span className="text-gray-900">for Australian tradies</span>
           </p>
         </motion.div>
       </div>
@@ -396,8 +396,8 @@ export function PricingSection() {
               answer: "Yep. Upgrade or downgrade whenever you like. No penalties, no questions asked.",
             },
             {
-              question: "What's the money-back guarantee?",
-              answer: "If you're not happy in the first 30 days, we'll give you a full refund. No questions asked.",
+              question: "What if it's not working out?",
+              answer: "If you're not happy in the first 30 days, cancel and you'll only pay for what you've used. No lock-in contracts, no cancellation fees.",
             },
             {
               question: "Do I need a new phone number?",

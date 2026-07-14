@@ -19,10 +19,10 @@ export function CRMCarousel() {
     <div className="py-16 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-8">
         <h3 className="text-2xl text-center text-gray-900 mb-2">
-          Integrates with your existing tools
+          Works alongside the tools you already use
         </h3>
         <p className="text-gray-600 text-center">
-          Seamlessly connects with leading CRM and job management platforms
+          Handsfree fits into how you already run things — no rip-and-replace
         </p>
       </div>
 

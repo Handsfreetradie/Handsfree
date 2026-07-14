@@ -83,8 +83,15 @@ export function InquiryForm() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl text-gray-900 mb-2">Thank you!</h3>
-              <p className="text-gray-600">We've received your message and will get back to you soon.</p>
+              <h3 className="text-2xl text-gray-900 mb-2">Almost there!</h3>
+              <p className="text-gray-600">
+                Your email app has opened with your message ready to go — just hit send.
+                <br />
+                Didn't open? Email us directly at{" "}
+                <a href="mailto:hello@handsfreetradie.com.au" className="text-orange-500 hover:underline">
+                  hello@handsfreetradie.com.au
+                </a>
+              </p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -132,7 +139,7 @@ export function InquiryForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="0412 345 678"
                   />
                 </div>
 

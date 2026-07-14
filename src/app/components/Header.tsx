@@ -32,7 +32,7 @@ export function Header({ onDemoClick }: { onDemoClick?: () => void }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Handsfree" className="h-24 sm:h-32 md:h-40 w-auto" />
+          <img src={logo} alt="Handsfree" className="h-16 sm:h-20 w-auto" />
         </Link>
 
         {/* Navigation */}

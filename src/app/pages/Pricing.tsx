@@ -77,7 +77,6 @@ export function Pricing() {
         "VIP caller routing",
         "White label options",
         "Dedicated account manager",
-        "SLA guarantee",
       ],
       cta: "Contact Us",
       popular: false,
@@ -245,7 +244,7 @@ export function Pricing() {
             className="text-center mt-16"
           >
             <p className="text-gray-600 text-lg">
-              Trusted by <span className="text-gray-900">500+ Australian businesses</span>
+              Built in Australia <span className="text-gray-900">for Australian tradies</span>
             </p>
           </motion.div>
         </div>
@@ -439,8 +438,8 @@ export function Pricing() {
                 answer: "Yep. Upgrade or downgrade whenever you like. No penalties, no questions asked.",
               },
               {
-                question: "What's the money-back guarantee?",
-                answer: "If you're not happy in the first 30 days, we'll give you a full refund. No questions asked.",
+                question: "What if it's not working out?",
+                answer: "If you're not happy in the first 30 days, cancel and you'll only pay for what you've used. No lock-in contracts, no cancellation fees.",
               },
               {
                 question: "Do I need a new phone number?",
@@ -487,7 +486,7 @@ export function Pricing() {
               Ready to stop missing calls?
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-              30-day money-back guarantee. No lock-in contracts.
+              Not happy in the first 30 days? Cancel and only pay for what you've used. No lock-in contracts.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

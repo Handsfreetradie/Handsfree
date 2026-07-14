@@ -126,7 +126,7 @@ export function MobileHome() {
             ))}
           </div>
           <p className="text-gray-600 text-sm mb-6">
-            Trusted by <span className="font-medium text-gray-900">500+ Australian businesses</span>
+            Built in Australia <span className="font-medium text-gray-900">for Australian tradies</span>
           </p>
           <p className="text-gray-500 text-xs italic max-w-sm mx-auto">
             "Handsfree answers every call like a real person. Our customers love it and we never miss a lead anymore."
@@ -165,7 +165,7 @@ export function MobileHome() {
         <div className="text-center">
           <h2 className="text-2xl mb-4">Ready to get started?</h2>
           <p className="text-orange-50 mb-6 text-sm">
-            30-day money-back guarantee • Cancel anytime
+            Cancel anytime • Only pay for what you've used
           </p>
           <Link
             to="/onboarding"

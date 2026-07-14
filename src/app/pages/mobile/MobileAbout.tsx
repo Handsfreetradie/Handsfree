@@ -107,20 +107,20 @@ export function MobileAbout() {
         <h2 className="text-2xl mb-6 text-center">By the Numbers</h2>
         <div className="grid grid-cols-2 gap-4">
           <div className="text-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-            <div className="text-3xl font-bold mb-1">500+</div>
-            <div className="text-sm text-orange-50">Businesses Served</div>
-          </div>
-          <div className="text-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-            <div className="text-3xl font-bold mb-1">50k+</div>
-            <div className="text-sm text-orange-50">Calls Answered</div>
-          </div>
-          <div className="text-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
             <div className="text-3xl font-bold mb-1">24/7</div>
             <div className="text-sm text-orange-50">Always Available</div>
           </div>
           <div className="text-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-            <div className="text-3xl font-bold mb-1">98%</div>
-            <div className="text-sm text-orange-50">Customer Satisfaction</div>
+            <div className="text-3xl font-bold mb-1">&lt; 2 sec</div>
+            <div className="text-sm text-orange-50">Answer Speed</div>
+          </div>
+          <div className="text-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+            <div className="text-3xl font-bold mb-1">100%</div>
+            <div className="text-sm text-orange-50">Calls Answered</div>
+          </div>
+          <div className="text-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+            <div className="text-3xl font-bold mb-1">AU</div>
+            <div className="text-sm text-orange-50">Built &amp; Supported</div>
           </div>
         </div>
       </section>
