@@ -1,38 +1,38 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { PhoneCall, CalendarCheck, Clock, ClipboardList, MessageSquare, Mic } from "lucide-react";
+import { PhoneCall, ClipboardList, Wrench, Search, RefreshCw, Users } from "lucide-react";
 
 const features = [
   {
-    icon: PhoneCall,
-    title: "Answers Every Call",
-    description: "When you're on the tools, under a house, or up a pole, your AI picks up. No missed leads while you're working.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Books Jobs Straight In",
-    description: "Customers pick a time and it lands straight in your calendar. No back-and-forth, no double-bookings.",
-  },
-  {
-    icon: Clock,
-    title: "Always On — Even at 3am",
-    description: "Emergency calls, weekend enquiries, after-hours leads. All answered, all captured, every day of the year.",
-  },
-  {
     icon: ClipboardList,
-    title: "Captures the Job Details",
-    description: "Name, number, address, and what's wrong. Everything you need before you call them back.",
+    title: "Custom Onboarding Form",
+    description: "Tell us your hours, your trade, your rules. We use this to build your AI correctly from day one — not guess.",
   },
   {
-    icon: MessageSquare,
-    title: "Instant SMS Text-Back",
-    description: "Miss a call? They get an instant text to keep the lead warm while you finish the job.",
+    icon: Users,
+    title: "We Get on a Call With You",
+    description: "Before we build anything, we jump on a call to understand exactly how your business works. No assumptions.",
   },
   {
-    icon: Mic,
-    title: "Sounds Like Your Business",
-    description: "Answers in your business name with a greeting you set. Professional every single time.",
+    icon: Wrench,
+    title: "Built From Scratch for You",
+    description: "Your AI is configured around your specific business. Not a generic template you're left to tweak yourself.",
+  },
+  {
+    icon: Search,
+    title: "We Monitor Every Call",
+    description: "We actively check how your AI is performing. If it's not handling something right, we catch it and fix it.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Ongoing Improvements",
+    description: "Your business changes — we keep your AI sharp. Regular tune-ups included, no extra charge.",
+  },
+  {
+    icon: PhoneCall,
+    title: "Real Support, Real People",
+    description: "Got a question or want to change something? You can actually reach us. No ticket queue, no runaround.",
   },
 ];
 
@@ -50,12 +50,12 @@ export function Features() {
           className="text-center mb-12 sm:mb-20"
         >
           <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-4 sm:mb-6 tracking-tight px-2">
-            Everything you need.
+            More than software.
             <br />
-            <span className="text-gray-400">Nothing you don't.</span>
+            <span className="text-orange-500">A service.</span>
           </h2>
           <p className="text-base sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto px-4">
-            Built for tradies who are tired of losing jobs to a missed call
+            We're not another app that takes your money and disappears. We're invested in making your setup actually work.
           </p>
         </motion.div>
 

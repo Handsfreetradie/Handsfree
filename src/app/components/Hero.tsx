@@ -26,7 +26,7 @@ export function Hero({ onDemoClick }: { onDemoClick: () => void }) {
             className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-gray-100 rounded-full mb-6 sm:mb-8"
           >
             <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-            <span className="text-xs sm:text-sm text-gray-700">Now available for all businesses</span>
+            <span className="text-xs sm:text-sm text-gray-700">Custom-built for your trade</span>
           </motion.div>
 
           {/* Main headline */}
@@ -48,8 +48,8 @@ export function Hero({ onDemoClick }: { onDemoClick: () => void }) {
             transition={{ delay: 0.4 }}
             className="text-base sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4"
           >
-            Your AI phone receptionist that answers every call, books appointments, 
-            and handles customer inquiries — 24/7, in your brand's voice.
+            We don't sell you a tool and leave you to figure it out. We build a custom AI solution
+            around how your trade works — and we actively monitor and improve it over time.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -79,7 +79,7 @@ export function Hero({ onDemoClick }: { onDemoClick: () => void }) {
             transition={{ delay: 0.6 }}
             className="text-xs sm:text-sm text-gray-500 px-4"
           >
-            Not just another AI receptionist • Fully customisable to your business needs
+            Custom-built for your business • We monitor and improve it for you
           </motion.div>
         </motion.div>
 

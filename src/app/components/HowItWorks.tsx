@@ -1,23 +1,23 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { Settings, ToggleRight, Eye } from "lucide-react";
+import { ClipboardList, Wrench, TrendingUp } from "lucide-react";
 
 const steps = [
   {
-    icon: Settings,
-    title: "1. Customise Your AI",
-    description: "Set your own rules. Choose when the AI answers — business hours, after-hours, or never. Set what it says. You decide everything.",
+    icon: ClipboardList,
+    title: "1. Tell Us How You Work",
+    description: "Fill in your onboarding form — your hours, your rules, how you talk to customers. Then we jump on a call to make sure we've got everything right.",
   },
   {
-    icon: ToggleRight,
-    title: "2. Turn It On When You Need It",
-    description: "Flip it on when you're busy. Answer calls yourself anytime. Full control, always. No lock-in.",
+    icon: Wrench,
+    title: "2. We Build Your Custom AI",
+    description: "We configure your AI from scratch based on how you actually run your business. Not a generic template — your setup, built for you.",
   },
   {
-    icon: Eye,
-    title: "3. Monitor & Adjust Anytime",
-    description: "Watch every call in real-time. Adjust responses instantly. Get transcripts. You're always in the driver's seat.",
+    icon: TrendingUp,
+    title: "3. We Monitor and Keep Improving",
+    description: "We watch how your AI is performing and keep tuning it. If something's not right, we fix it. You get a solution that keeps getting better.",
   },
 ];
 
@@ -35,10 +35,10 @@ export function HowItWorks() {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 text-gray-900 px-2">
-            You're in <span className="text-orange-500">control.</span> Setup takes 5 minutes.
+            We build it. <span className="text-orange-500">We improve it.</span>
           </h2>
           <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-            Set your rules. Flip it on. You're always in charge.
+            We take the time to understand your trade before we build anything.
           </p>
         </motion.div>
 
