@@ -8,6 +8,7 @@ import { LeadFormModal } from "../components/LeadFormModal";
 import { HowItWorks } from "../components/HowItWorks";
 import { Features } from "../components/Features";
 import { DemoCallSection } from "../components/DemoCallSection";
+import { SmsOnlySection } from "../components/SmsOnlySection";
 import { PricingSection } from "../components/PricingSection";
 import { SocialProof } from "../components/SocialProof";
 import { InquiryForm } from "../components/InquiryForm";
@@ -59,6 +60,7 @@ export function Home() {
         <HowItWorks />
         <Features />
         <DemoCallSection onDemoClick={handleDemoClick} />
+        <SmsOnlySection />
         <PricingSection />
         <SocialProof />
         <InquiryForm />

@@ -10,8 +10,8 @@ export function MobilePricing() {
   const plans = [
     {
       name: "Essentials",
-      tagline: "Simple SMS text-back service",
-      description: "For sole traders who just need to stop losing leads",
+      tagline: "SMS-only — no receptionist",
+      description: "Not ready for a receptionist? Start here.",
       monthlyPrice: 89,
       annualPrice: 71,
       icon: Phone,

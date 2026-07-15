@@ -12,12 +12,13 @@ export function PricingSection() {
   const plans = [
     {
       name: "Essentials",
-      tagline: "Stop missing quote requests",
-      description: "For solo tradies tired of chasing cold leads",
+      tagline: "SMS-only — no receptionist",
+      description: "Not ready for a receptionist? Start here.",
       monthlyPrice: 89,
       annualPrice: 71,
       icon: Phone,
       features: [
+        "Your phone rings exactly like it does now",
         "Automatic SMS reply when you miss a call",
         "100 SMS/month included",
         "Captures customer name, number, and job details",
