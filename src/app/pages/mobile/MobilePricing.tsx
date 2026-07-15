@@ -17,7 +17,7 @@ export function MobilePricing() {
       icon: Phone,
       features: [
         "Automatic SMS text-back",
-        "Up to 50 messages/month",
+        "100 SMS/month included",
         "Lead capture system",
         "Basic analytics",
         "Email notifications",
@@ -35,7 +35,7 @@ export function MobilePricing() {
       features: [
         "Everything in Essentials",
         "digital receptionist",
-        "Up to 200 mins/month",
+        "150 mins + 150 SMS/month",
         "24/7 after-hours coverage",
         "Call transcripts",
         "Business hours scheduling",
@@ -52,7 +52,7 @@ export function MobilePricing() {
       icon: BarChart3,
       features: [
         "Everything in Receptionist",
-        "Up to 400 mins/month",
+        "400 mins + 400 SMS/month",
         "Auto calendar booking",
         "Business dashboard",
         "Priority support",
@@ -71,7 +71,7 @@ export function MobilePricing() {
       icon: Settings,
       features: [
         "Everything in Pro",
-        "Unlimited call minutes",
+        "Custom call and SMS volume",
         "Custom call flows",
         "CRM integrations",
         "Multi-location support",
