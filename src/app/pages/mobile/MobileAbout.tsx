@@ -46,7 +46,7 @@ export function MobileAbout() {
           <h2 className="text-2xl text-gray-900 mb-4">Our Story</h2>
           <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
             <p>
-              We're Kyle and Cassie — a sparky and the woman who used to answer his phone.
+              We're Kyle and Cassie — two regular people who got tired of missing calls.
             </p>
             <p>
               Kyle's an electrician. Still is. On the tools, you can't answer your phone —

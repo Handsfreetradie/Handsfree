@@ -36,7 +36,8 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            Not a tech company — a sparky and the woman who used to answer his phone.
+            Two regular people who got tired of missing calls — and built something
+            to help others in the same situation.
           </motion.p>
         </div>
       </section>
@@ -75,8 +76,8 @@ export function About() {
             <h3 className="text-2xl text-gray-900 mb-1">Cassie</h3>
             <p className="text-orange-500 mb-4">Co-founder · Marketing &amp; Customers</p>
             <p className="text-gray-600 leading-relaxed">
-              Cassie answered the calls for Kyle's electrical business — she was the original
-              Handsfree. Now she looks after our marketing and our customers.
+              Cassie spent years answering the calls for Kyle's electrical business, on top of
+              everything else in her day. Now she looks after our marketing and our customers.
             </p>
           </motion.div>
         </div>
@@ -180,15 +181,14 @@ export function About() {
                 on life, because of a phone.
               </p>
               <p>
-                And we realised: most tradies don't have a Cassie. So we built one. Handsfree is a
-                digital receptionist that does what Cassie did — answers every call, takes down the
-                job, books it in. And it never misses one because it's asleep, on another job, or
-                trying to have a life.
+                We knew we weren't the only ones dealing with this. So we built Handsfree — a
+                digital receptionist that answers every call, takes down the job, and books it in.
+                It never misses a call because it's asleep, on another job, or trying to have a life.
               </p>
               <p>
-                We're not a big company. We're two people solving a problem we actually had. When we
-                say we monitor your setup and keep improving it — that's us, personally. When you
-                call, you get us. And that's exactly how we like it.
+                We're not a big company. We're two regular people who ran into a problem, solved it
+                for ourselves, and want to help others in the same situation. When we say we monitor
+                your setup and keep improving it — that's us, personally. When you call, you get us.
               </p>
             </div>
           </motion.div>
@@ -261,7 +261,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl mb-6">Want your own Cassie?</h2>
+            <h2 className="text-4xl md:text-5xl mb-6">Ready to stop missing calls?</h2>
             <p className="text-xl text-gray-600 mb-8">
               Let's build your receptionist together
             </p>
