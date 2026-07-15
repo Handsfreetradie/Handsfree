@@ -3,6 +3,10 @@ import { motion } from "motion/react";
 import { Phone, Zap, CheckCircle, Target, Users, Heart, ArrowLeft, Menu } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
 
+// Joint photo of Kyle & Cassie. To turn it on: drop the photo into the
+// public folder as kyle-cassie.jpg, then change this to "/kyle-cassie.jpg".
+const FOUNDER_PHOTO = "";
+
 export function MobileAbout() {
   return (
     <div className="min-h-screen bg-white pb-20">
@@ -35,6 +39,17 @@ export function MobileAbout() {
           </p>
         </motion.div>
       </section>
+
+      {/* Founder photo */}
+      {FOUNDER_PHOTO && (
+        <section className="px-6 pb-6">
+          <img
+            src={FOUNDER_PHOTO}
+            alt="Kyle and Cassie, founders of Handsfree"
+            className="w-full rounded-2xl shadow border border-gray-200 object-cover"
+          />
+        </section>
+      )}
 
       {/* Story */}
       <section className="py-8 px-6 bg-gray-50">

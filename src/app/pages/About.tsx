@@ -7,6 +7,10 @@ import { PhoneDemo } from "../components/PhoneDemo";
 import { LeadFormModal } from "../components/LeadFormModal";
 import { Link } from "react-router";
 
+// Joint photo of Kyle & Cassie. To turn it on: drop the photo into the
+// public folder as kyle-cassie.jpg, then change this to "/kyle-cassie.jpg".
+const FOUNDER_PHOTO = "";
+
 export function About() {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const [isDemoOpen, setIsDemoOpen] = useState(false);
@@ -44,6 +48,21 @@ export function About() {
 
       {/* Who we are */}
       <section className="pb-20 px-6">
+        {FOUNDER_PHOTO && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto mb-12"
+          >
+            <img
+              src={FOUNDER_PHOTO}
+              alt="Kyle and Cassie, founders of Handsfree"
+              className="w-full rounded-3xl shadow-lg border border-gray-200 object-cover"
+            />
+          </motion.div>
+        )}
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
