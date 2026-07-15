@@ -58,13 +58,19 @@ export function Header({ onDemoClick }: { onDemoClick?: () => void }) {
           >
             Demo
           </a>
-          <a 
+          <a
             href="#pricing"
             onClick={(e) => handleNavClick(e, "#pricing")}
             className="text-gray-600 hover:text-gray-900 transition-colors"
           >
             Pricing
           </a>
+          <Link
+            to="/about"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            About Us
+          </Link>
         </nav>
 
         {/* CTA Buttons */}
