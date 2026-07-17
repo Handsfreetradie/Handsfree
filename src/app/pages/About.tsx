@@ -9,7 +9,7 @@ import { Link } from "react-router";
 
 // Joint photo of Kyle & Cassie. To turn it on: drop the photo into the
 // public folder as kyle-cassie.jpg, then change this to "/kyle-cassie.jpg".
-const FOUNDER_PHOTO = "";
+const FOUNDER_PHOTO = "/kyle-cassie.jpg";
 
 export function About() {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
@@ -63,43 +63,39 @@ export function About() {
             />
           </motion.div>
         )}
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-gray-50 rounded-3xl p-8 border border-gray-200 text-center"
-          >
-            <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-4xl text-white font-bold">K</span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-200"
+        >
+          <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+            <div className="text-center px-2 py-8 md:py-2 md:px-8">
+              <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-4xl text-white font-bold">K</span>
+              </div>
+              <h3 className="text-2xl text-gray-900 mb-1">Kyle</h3>
+              <p className="text-orange-500 mb-4">Co-founder · Electrician</p>
+              <p className="text-gray-600 leading-relaxed">
+                Still on the tools. Kyle lived the missed-call problem every day — he knows
+                exactly what a tradie needs from a receptionist, because he needed one himself.
+              </p>
             </div>
-            <h3 className="text-2xl text-gray-900 mb-1">Kyle</h3>
-            <p className="text-orange-500 mb-4">Co-founder · Electrician</p>
-            <p className="text-gray-600 leading-relaxed">
-              Still on the tools. Kyle lived the missed-call problem every day — he knows
-              exactly what a tradie needs from a receptionist, because he needed one himself.
-            </p>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-gray-50 rounded-3xl p-8 border border-gray-200 text-center"
-          >
-            <div className="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-4xl text-white font-bold">C</span>
+            <div className="text-center px-2 py-8 md:py-2 md:px-8">
+              <div className="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-4xl text-white font-bold">C</span>
+              </div>
+              <h3 className="text-2xl text-gray-900 mb-1">Cassie</h3>
+              <p className="text-orange-500 mb-4">Co-founder · Marketing &amp; Customers</p>
+              <p className="text-gray-600 leading-relaxed">
+                Cassie spent years answering the calls for Kyle's electrical business, on top of
+                everything else in her day. Now she looks after our marketing and our customers.
+              </p>
             </div>
-            <h3 className="text-2xl text-gray-900 mb-1">Cassie</h3>
-            <p className="text-orange-500 mb-4">Co-founder · Marketing &amp; Customers</p>
-            <p className="text-gray-600 leading-relaxed">
-              Cassie spent years answering the calls for Kyle's electrical business, on top of
-              everything else in her day. Now she looks after our marketing and our customers.
-            </p>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Mission Section */}

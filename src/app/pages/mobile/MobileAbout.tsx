@@ -5,7 +5,7 @@ import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
 
 // Joint photo of Kyle & Cassie. To turn it on: drop the photo into the
 // public folder as kyle-cassie.jpg, then change this to "/kyle-cassie.jpg".
-const FOUNDER_PHOTO = "";
+const FOUNDER_PHOTO = "/kyle-cassie.jpg";
 
 export function MobileAbout() {
   return (
