@@ -73,7 +73,7 @@ export default async function handler(req: any, res: any) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: process.env.RESEND_FROM || "Handsfree Website <notifications@handsfreetradie.com.au>",
+      from: process.env.RESEND_FROM || "Handsfree Website <hello@notifications.handsfreetradie.com.au>",
       to: [TO_EMAIL],
       reply_to: email,
       subject,
