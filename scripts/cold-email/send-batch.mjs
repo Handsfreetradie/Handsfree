@@ -4,7 +4,8 @@
 //   npm run cold-email -- contacts.csv --send     (actually sends)
 //   npm run cold-email -- contacts.csv --limit=50 (override the default 150/run cap)
 //
-// CSV needs an "email" column. Optional: "name" (or "first_name"), "business" (or "company").
+// Accepts .csv or .xlsx/.xls (first sheet, first row is the header).
+// Needs an "email" column. Optional: "name" (or "first_name"), "business" (or "company").
 // Requires RESEND_API_KEY in the environment — run via `npm run cold-email`, which loads .env.
 //
 // Every email address this tool has ever sent to is recorded in data/sent-log.json (gitignored)
@@ -20,6 +21,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "csv-parse/sync";
+import ExcelJS from "exceljs";
 import { Resend } from "resend";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -79,18 +81,58 @@ async function saveLedger(entries) {
   await writeFile(LEDGER_PATH, JSON.stringify(entries, null, 2));
 }
 
-function readCsv(csvPath) {
-  const raw = readFileSync(csvPath, "utf8");
+function normalizeRecord(r) {
+  return {
+    email: (r.email || "").trim(),
+    name: (r.name || r.first_name || r.firstname || "").trim(),
+    business: (r.business || r.business_name || r.company || "").trim(),
+  };
+}
+
+function readCsvFile(filePath) {
+  const raw = readFileSync(filePath, "utf8");
   const records = parse(raw, {
     columns: (header) => header.map((h) => h.trim().toLowerCase().replace(/\s+/g, "_")),
     skip_empty_lines: true,
     trim: true,
   });
-  return records.map((r) => ({
-    email: (r.email || "").trim(),
-    name: (r.name || r.first_name || r.firstname || "").trim(),
-    business: (r.business || r.company || "").trim(),
-  }));
+  return records.map(normalizeRecord);
+}
+
+function xlsxCellText(cell) {
+  let value = cell.value;
+  if (value && typeof value === "object" && "text" in value) value = value.text; // rich text
+  if (value && typeof value === "object" && "result" in value) value = value.result; // formula
+  return value == null ? "" : String(value).trim();
+}
+
+async function readXlsxFile(filePath) {
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.readFile(filePath);
+  const sheet = workbook.worksheets[0];
+  if (!sheet) return [];
+
+  const headers = [];
+  sheet.getRow(1).eachCell({ includeEmpty: true }, (cell, colNumber) => {
+    headers[colNumber] = xlsxCellText(cell).toLowerCase().replace(/\s+/g, "_");
+  });
+
+  const records = [];
+  sheet.eachRow((row, rowNumber) => {
+    if (rowNumber === 1) return;
+    const record = {};
+    row.eachCell({ includeEmpty: true }, (cell, colNumber) => {
+      if (headers[colNumber]) record[headers[colNumber]] = xlsxCellText(cell);
+    });
+    records.push(record);
+  });
+  return records.map(normalizeRecord);
+}
+
+async function readContacts(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  if (ext === ".xlsx" || ext === ".xls") return readXlsxFile(filePath);
+  return readCsvFile(filePath);
 }
 
 const TERMINAL_STATUSES = new Set(["sent", "failed", "cancelled", "canceled"]);
@@ -125,11 +167,11 @@ async function main() {
     process.exit(1);
   }
   if (!csvPath) {
-    console.error("Usage: npm run cold-email -- <contacts.csv> [--send] [--limit=150]");
+    console.error("Usage: npm run cold-email -- <contacts.csv|xlsx> [--send] [--limit=150]");
     process.exit(1);
   }
 
-  const rows = readCsv(csvPath);
+  const rows = await readContacts(csvPath);
   const valid = rows.filter((r) => EMAIL_RE.test(r.email));
   const invalidCount = rows.length - valid.length;
 
