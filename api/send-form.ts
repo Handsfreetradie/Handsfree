@@ -11,7 +11,20 @@ function clean(value: unknown): string {
   return value.trim().slice(0, MAX_FIELD_LENGTH);
 }
 
+const ALLOWED_ORIGIN = "https://www.handsfreetradie.com.au";
+
 export default async function handler(req: any, res: any) {
+  // CORS: forms on the real domain call this via the vercel.app URL
+  // directly (workaround for a routing issue where the custom domain
+  // doesn't reach this function), which makes it a cross-origin request.
+  res.setHeader("Access-Control-Allow-Origin", ALLOWED_ORIGIN);
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(204).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -35,17 +48,15 @@ export default async function handler(req: any, res: any) {
   let text: string;
 
   if (formType === "signup") {
-    subject = `New Handsfree signup: ${name}${body.company ? ` — ${clean(body.company)}` : ""}`;
+    subject = `New Handsfree signup: ${name}${body.businessType ? ` — ${clean(body.businessType)}` : ""}`;
     text = [
-      "New signup from the Handsfree website",
+      "New \"Get Started\" signup from the Handsfree website",
       "",
       `Name: ${name}`,
       `Email: ${email}`,
       `Phone: ${clean(body.phone)}`,
-      `Company: ${clean(body.company)}`,
-      `Job title: ${clean(body.jobTitle)}`,
       `Business type: ${clean(body.businessType)}`,
-      `Call volume: ${clean(body.callVolume)}`,
+      `Preferred contact method: ${clean(body.preferredContact)}`,
       "",
       `Submitted: ${new Date().toLocaleString("en-AU", { timeZone: "Australia/Perth" })} (Perth time)`,
     ].join("\n");

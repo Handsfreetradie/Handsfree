@@ -2,6 +2,11 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { Send } from "lucide-react";
 
+// Workaround: the custom domain isn't routing /api/* to serverless functions
+// (separate unresolved issue) - hit the vercel.app URL directly instead,
+// which works. CORS is set up on the function to allow this origin.
+const SEND_FORM_URL = "https://handsfreewebsite.vercel.app/api/send-form";
+
 export function InquiryForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,7 +25,7 @@ export function InquiryForm() {
     setSubmitError("");
 
     try {
-      const response = await fetch("/api/send-form", {
+      const response = await fetch(SEND_FORM_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ formType: "contact", ...formData }),

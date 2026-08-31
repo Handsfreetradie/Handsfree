@@ -5,6 +5,11 @@ import { Phone, Zap, CheckCircle, Menu, Mail, Send, Instagram, Linkedin, ArrowLe
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
 import { Seo } from "../../components/Seo";
 
+// Workaround: the custom domain isn't routing /api/* to serverless functions
+// (separate unresolved issue) - hit the vercel.app URL directly instead,
+// which works. CORS is set up on the function to allow this origin.
+const SEND_FORM_URL = "https://handsfreewebsite.vercel.app/api/send-form";
+
 export function MobileContact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,7 +25,7 @@ export function MobileContact() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("/api/send-form", {
+      const response = await fetch(SEND_FORM_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
