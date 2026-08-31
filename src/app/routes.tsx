@@ -4,6 +4,8 @@ import { About } from "./pages/About";
 import { Pricing } from "./pages/Pricing";
 import { Onboarding } from "./pages/Onboarding";
 import { ComingSoon } from "./pages/ComingSoon";
+import { BlogIndex } from "./pages/BlogIndex";
+import { BlogPost } from "./pages/BlogPost";
 import { Privacy } from "./pages/Privacy";
 import { Terms } from "./pages/Terms";
 import { Security } from "./pages/Security";
@@ -97,7 +99,16 @@ export const router = createBrowserRouter([
     path: "/blog",
     Component: () => (
       <Layout>
-        <ComingSoon title="Blog Coming Soon" description="We're working hard on our blog. Check back soon for insights, updates, and stories from the Handsfree team." />
+        <BlogIndex />
+      </Layout>
+    ),
+    errorElement: <ErrorBoundary />,
+  },
+  {
+    path: "/blog/:slug",
+    Component: () => (
+      <Layout>
+        <BlogPost />
       </Layout>
     ),
     errorElement: <ErrorBoundary />,
