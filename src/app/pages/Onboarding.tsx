@@ -128,7 +128,9 @@ export function Onboarding() {
             <h1 className="text-5xl md:text-6xl mb-6 text-gray-900">
               Get started with <span className="text-orange-500">Handsfree</span>
             </h1>
-            <p className="text-xl text-gray-600">Tell us a bit about your business and we'll be in touch</p>
+            <p className="text-xl text-gray-600">
+              Tell us a bit about your business and we'll be in touch with a fully customisable onboarding built around how you work
+            </p>
           </div>
 
           <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200 space-y-6">
