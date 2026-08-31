@@ -102,6 +102,15 @@ export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
     handleCallEnd();
   };
 
+  // The call connects automatically as soon as the phone appears — no
+  // accept button to click.
+  useEffect(() => {
+    if (isOpen && callState === "incoming" && !isConnecting) {
+      handleAccept();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
+
   useEffect(() => {
     if (callState === "active") {
       const timer = setInterval(() => {
@@ -182,7 +191,7 @@ export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-          onClick={onClose}
+          onClick={handleDecline}
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -205,9 +214,9 @@ export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
                   className="h-full flex flex-col items-center justify-between py-16 px-6"
                 >
                   <div className="text-center">
-                    <p className="text-sm text-gray-400 mb-2">Demo Call</p>
-                    <h3 className="text-3xl mb-2">Your Receptionist</h3>
-                    <p className="text-gray-400">Receptionist</p>
+                    <p className="text-sm text-gray-400 mb-2">Handsfree Demo</p>
+                    <h3 className="text-3xl mb-2">Calling you now...</h3>
+                    <p className="text-gray-400">Connecting you to your receptionist</p>
                     {error && (
                       <p className="text-red-400 text-sm mt-4 px-4">{error}</p>
                     )}
@@ -228,16 +237,14 @@ export function PhoneDemo({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
 
                   <div className="flex gap-8">
                     <button
-                      onClick={handleDecline}
-                      className="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center hover:bg-red-600 transition-colors"
-                      disabled={isConnecting}
+                      className="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center opacity-40 cursor-not-allowed"
+                      disabled
                     >
                       <PhoneOff className="w-8 h-8" />
                     </button>
                     <button
-                      onClick={handleAccept}
-                      className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center hover:bg-green-600 transition-colors disabled:opacity-50"
-                      disabled={isConnecting}
+                      className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center opacity-40 cursor-not-allowed"
+                      disabled
                     >
                       {isConnecting ? (
                         <motion.div
