@@ -14,8 +14,8 @@ export function PricingSection() {
       name: "Essentials",
       tagline: "SMS-only — no receptionist",
       description: "Not ready for a receptionist? Start here.",
-      monthlyPrice: 89,
-      annualPrice: 71,
+      monthlyPrice: 129,
+      annualPrice: 103,
       icon: Phone,
       features: [
         "Your phone rings exactly like it does now",
