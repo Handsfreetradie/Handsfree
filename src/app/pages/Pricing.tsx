@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Check, Phone, BarChart3, Settings, ArrowLeft, TrendingDown, Clock, DollarSign } from "lucide-react";
 import { Link } from "react-router";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../components/Seo";
 
 export function Pricing() {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -85,6 +86,11 @@ export function Pricing() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Pricing — Handsfree AI Receptionist for Tradies"
+        description="Simple plans from $129/month: SMS-only missed-call text-back, a full AI receptionist, or a custom plan for high-volume tradies. No lock-in contracts."
+        canonicalPath="/pricing"
+      />
       {/* Header - matching home page style */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">

@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { Phone, PhoneOff, ArrowLeft, Volume2 } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../../components/Seo";
 
 export function MobileDemo() {
   const [callState, setCallState] = useState<"incoming" | "active" | "ended">("incoming");
@@ -47,6 +48,11 @@ export function MobileDemo() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      <Seo
+        title="Live Demo — Handsfree AI Receptionist"
+        description="Hear Handsfree's AI receptionist answer a call live — see exactly how it sounds before you sign up."
+        canonicalPath="/mobile/demo"
+      />
       {/* Mobile Header */}
       <header className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800 px-4 py-3">
         <div className="flex items-center justify-between">

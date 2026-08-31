@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowLeft, Building2, Mail, Phone, User, Briefcase, CheckCircle } from "lucide-react";
 import { Link } from "react-router";
+import { Seo } from "../components/Seo";
 
 export function Onboarding() {
   const [step, setStep] = useState(1);
@@ -135,6 +136,11 @@ export function Onboarding() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50">
+      <Seo
+        title="Get Started — Handsfree AI Receptionist"
+        description="Tell us about your trade and call volume, and we'll build your custom AI receptionist set up around how you work."
+        canonicalPath="/onboarding"
+      />
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">

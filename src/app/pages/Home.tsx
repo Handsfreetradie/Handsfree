@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { Seo } from "../components/Seo";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { PhoneDemo } from "../components/PhoneDemo";
@@ -53,6 +54,19 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-white relative">
+      <Seo
+        title="Handsfree — AI Receptionist for Tradies. Never Miss a Call."
+        description="Handsfree builds a custom AI digital receptionist around how your trade works. Every call answered, every job captured — built, monitored, and improved for you."
+        canonicalPath="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Handsfree",
+          url: "https://www.handsfreetradie.com.au/",
+          logo: "https://www.handsfreetradie.com.au/assets/af7ee8e2a310f2295e9721f16147dcd6876b81ea-BaJvfsTb.png",
+          description: "Custom AI digital receptionist for Australian tradies — call answering, missed-call SMS text-back, and job capture.",
+        }}
+      />
       {/* Ensure content is above texture */}
       <div className="relative z-10">
         <Header onDemoClick={handleDemoClick} />

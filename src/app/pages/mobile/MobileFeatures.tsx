@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { motion } from "motion/react";
 import { PhoneCall, CalendarCheck, Clock, ClipboardList, MessageSquare, Mic, ArrowLeft, ChevronRight, Zap, CheckCircle, Menu } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../../components/Seo";
 
 const features = [
   {
@@ -75,6 +76,11 @@ const features = [
 export function MobileFeatures() {
   return (
     <div className="min-h-screen bg-white pb-24">
+      <Seo
+        title="Features — Handsfree AI Receptionist"
+        description="Every call answered, calendar booking, instant SMS follow-up, and smart call routing — see what Handsfree's AI receptionist does for your trade business."
+        canonicalPath="/mobile/features"
+      />
       {/* Mobile Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 py-3">
         <div className="flex items-center justify-between">

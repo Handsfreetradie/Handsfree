@@ -5,6 +5,7 @@ import { FileText, User, CreditCard, Shield, AlertTriangle, Copyright, Server, S
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../components/Seo";
 
 export function Terms() {
   const ref = useRef(null);
@@ -34,6 +35,11 @@ export function Terms() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Terms of Service — Handsfree"
+        description="The terms and conditions for using Handsfree's AI receptionist service — billing, acceptable use, and account responsibilities."
+        canonicalPath="/terms"
+      />
       <Header />
       
       {/* Hero Section */}

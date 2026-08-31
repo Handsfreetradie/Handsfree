@@ -5,6 +5,7 @@ import { Lock, Shield, Server, Key, Bell, CheckCircle, Mail, MapPin } from "luci
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../components/Seo";
 
 export function Security() {
   const ref = useRef(null);
@@ -45,6 +46,11 @@ export function Security() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Security — Handsfree"
+        description="How Handsfree protects your calls and customer data — encryption, infrastructure, and security practices for our AI receptionist platform."
+        canonicalPath="/security"
+      />
       <Header />
       
       {/* Hero Section */}

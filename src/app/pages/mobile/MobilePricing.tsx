@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Phone, BarChart3, Settings, Check, ArrowLeft, Menu, Zap } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../../components/Seo";
 
 export function MobilePricing() {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -84,6 +85,11 @@ export function MobilePricing() {
 
   return (
     <div className="min-h-screen bg-white pb-24">
+      <Seo
+        title="Pricing — Handsfree AI Receptionist for Tradies"
+        description="Simple plans from $129/month: SMS-only missed-call text-back, a full AI receptionist, or a custom plan for high-volume tradies. No lock-in contracts."
+        canonicalPath="/pricing"
+      />
       {/* Mobile Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 py-3">
         <div className="flex items-center justify-between">

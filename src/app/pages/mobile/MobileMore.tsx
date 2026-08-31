@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Phone, Zap, CheckCircle, Menu, Info, Mail, Shield, FileText, Building, ChevronRight } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../../components/Seo";
 
 export function MobileMore() {
   const menuItems = [
@@ -45,6 +46,11 @@ export function MobileMore() {
 
   return (
     <div className="min-h-screen bg-white pb-20">
+      <Seo
+        title="More — Handsfree"
+        description="Explore Handsfree — the AI receptionist built for Australian tradies. About us, contact, and account details."
+        canonicalPath="/mobile/more"
+      />
       {/* Mobile Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 py-3">
         <div className="flex items-center justify-center">

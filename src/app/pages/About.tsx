@@ -6,6 +6,7 @@ import { useState } from "react";
 import { PhoneDemo } from "../components/PhoneDemo";
 import { LeadFormModal } from "../components/LeadFormModal";
 import { Link } from "react-router";
+import { Seo } from "../components/Seo";
 
 // Joint photo of Kyle & Cassie. To turn it on: drop the photo into the
 // public folder as kyle-cassie.jpg, then change this to "/kyle-cassie.jpg".
@@ -21,8 +22,13 @@ export function About() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="About Handsfree — Built by a Tradie, for Tradies"
+        description="Kyle & Cassie built Handsfree after living the missed-call problem themselves. Here's the real story behind the AI receptionist for Australian tradies."
+        canonicalPath="/about"
+      />
       <Header onDemoClick={handleDemoClick} />
-      
+
       {/* Hero Section */}
       <section className="pt-56 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">

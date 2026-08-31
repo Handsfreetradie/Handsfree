@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Phone, ArrowRight, CheckCircle, Star, Zap, Clock, Menu } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
 import { LeadFormModal } from "../../components/LeadFormModal";
+import { Seo } from "../../components/Seo";
 
 export function MobileHome() {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
@@ -11,6 +12,11 @@ export function MobileHome() {
 
   return (
     <div className="min-h-screen bg-white pb-20">
+      <Seo
+        title="Handsfree — AI Receptionist for Tradies. Never Miss a Call."
+        description="Handsfree builds a custom AI digital receptionist around how your trade works. Every call answered, every job captured — built, monitored, and improved for you."
+        canonicalPath="/"
+      />
       {/* Mobile Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 px-4 py-3">
         <div className="flex items-center justify-between">

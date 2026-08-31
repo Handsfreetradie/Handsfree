@@ -5,6 +5,7 @@ import { Shield, Lock, Eye, Trash2, Clock, Users } from "lucide-react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../components/Seo";
 
 export function Privacy() {
   const ref = useRef(null);
@@ -12,6 +13,11 @@ export function Privacy() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Privacy Policy — Handsfree"
+        description="How Handsfree collects, uses, and protects your data as an Australian AI receptionist provider for tradies."
+        canonicalPath="/privacy"
+      />
       <Header />
       
       {/* Hero Section */}

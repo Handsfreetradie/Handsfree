@@ -4,7 +4,8 @@ import { Footer } from "../components/Footer";
 import { useState } from "react";
 import { PhoneDemo } from "../components/PhoneDemo";
 import { LeadFormModal } from "../components/LeadFormModal";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
+import { Seo } from "../components/Seo";
 
 interface ComingSoonProps {
   title: string;
@@ -14,6 +15,7 @@ interface ComingSoonProps {
 export function ComingSoon({ title, description }: ComingSoonProps) {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const location = useLocation();
 
   const handleDemoClick = () => {
     setIsLeadFormOpen(true);
@@ -21,6 +23,7 @@ export function ComingSoon({ title, description }: ComingSoonProps) {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
+      <Seo title={`${title} — Handsfree`} description={description} canonicalPath={location.pathname} />
       <Header onDemoClick={handleDemoClick} />
       
       <div className="flex-1 flex items-center justify-center px-6">

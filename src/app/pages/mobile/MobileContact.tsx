@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Phone, Zap, CheckCircle, Menu, Mail, Send, Instagram, Linkedin, ArrowLeft, MapPin } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
+import { Seo } from "../../components/Seo";
 
 export function MobileContact() {
   const [formData, setFormData] = useState({
@@ -50,6 +51,11 @@ export function MobileContact() {
 
   return (
     <div className="min-h-screen bg-white pb-20">
+      <Seo
+        title="Contact Handsfree — Get in Touch"
+        description="Questions about Handsfree's AI receptionist for tradies? Send us a message and we'll get back to you."
+        canonicalPath="/mobile/contact"
+      />
       {/* Mobile Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 py-3">
         <div className="flex items-center justify-between">
