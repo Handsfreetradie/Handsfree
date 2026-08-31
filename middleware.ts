@@ -15,5 +15,8 @@ export default function middleware(request: Request) {
 }
 
 export const config = {
-  matcher: "/:path*",
+  // Exclude /api/* - passing API requests through this middleware was
+  // dropping the POST method before it reached the serverless function,
+  // breaking every form submission on the site.
+  matcher: "/((?!api/).*)",
 };
