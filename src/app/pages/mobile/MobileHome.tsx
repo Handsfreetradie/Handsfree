@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Phone, ArrowRight, CheckCircle, Star, Zap, Clock, Menu } from "lucide-react";
 import logo from "figma:asset/af7ee8e2a310f2295e9721f16147dcd6876b81ea.png";
 import { LeadFormModal } from "../../components/LeadFormModal";
+import { MissedCallCalculator } from "../../components/MissedCallCalculator";
 import { Seo } from "../../components/Seo";
 
 export function MobileHome() {
@@ -94,6 +95,8 @@ export function MobileHome() {
           </motion.div>
         </motion.div>
       </section>
+
+      <MissedCallCalculator />
 
       {/* Quick Features */}
       <section className="py-12 px-6 bg-gray-50">

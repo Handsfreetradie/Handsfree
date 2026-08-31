@@ -4,6 +4,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { Seo } from "../components/Seo";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
+import { MissedCallCalculator } from "../components/MissedCallCalculator";
 import { PhoneDemo } from "../components/PhoneDemo";
 import { LeadFormModal } from "../components/LeadFormModal";
 import { HowItWorks } from "../components/HowItWorks";
@@ -71,6 +72,7 @@ export function Home() {
       <div className="relative z-10">
         <Header onDemoClick={handleDemoClick} />
         <Hero onDemoClick={handleDemoClick} />
+        <MissedCallCalculator />
         <HowItWorks />
         <Features />
         <DemoCallSection onDemoClick={handleDemoClick} />
