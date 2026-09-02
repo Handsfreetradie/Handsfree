@@ -63,6 +63,10 @@ export const blogPosts: BlogPost[] = [
         text: "If you're not sure whether you need a full receptionist or just want missed calls to get an instant text back, start with Essentials — it's the lower-commitment option, and you can upgrade any time your call volume grows.",
       },
       { type: "cta", text: "See the full pricing breakdown", to: "/pricing" },
+      {
+        type: "paragraph",
+        text: "Not sure if you even need full live answering yet? Read [AI receptionist vs. missed-call text-back](/blog/ai-receptionist-vs-missed-call-text-back) to work out which one actually fits your call volume.",
+      },
     ],
   },
   {
@@ -102,6 +106,10 @@ export const blogPosts: BlogPost[] = [
         text: "If you're unsure, start with Essentials. It's the lower-cost, lower-commitment option, and every plan can be upgraded later without starting over.",
       },
       { type: "cta", text: "Compare all plans", to: "/pricing" },
+      {
+        type: "paragraph",
+        text: "Still not sure how much this is actually costing you? Read [how many jobs you're losing to missed calls](/blog/how-many-jobs-are-you-losing-to-missed-calls) to put a number on it before you decide.",
+      },
     ],
   },
   {
@@ -140,6 +148,10 @@ export const blogPosts: BlogPost[] = [
         text: "We built Handsfree because we lived this exact problem running a trade business ourselves. If missed calls are costing you jobs, it's worth setting up a plan built around how you actually work.",
       },
       { type: "cta", text: "Get started", to: "/onboarding" },
+      {
+        type: "paragraph",
+        text: "Ready to actually fix it? [Here are seven real fixes](/blog/how-to-stop-missing-calls-as-a-tradie), ranked from free to fully handled.",
+      },
     ],
   },
 
@@ -242,6 +254,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "Never miss a call. Ever again. That's the whole point.",
+      },
+      {
+        type: "paragraph",
+        text: "Want the full pricing breakdown across every option on the market, not just Handsfree? Read [how much an AI receptionist costs in Australia](/blog/how-much-does-an-ai-receptionist-cost-in-australia).",
       },
     ],
   },
@@ -353,6 +369,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "If that number is bigger than $249, you already know what to do.",
+      },
+      {
+        type: "paragraph",
+        text: "Still weighing up hiring an actual person instead? See our honest [receptionist vs AI receptionist cost comparison](/blog/receptionist-vs-ai-receptionist-cost-comparison) before you decide.",
       },
     ],
   },
@@ -476,6 +496,10 @@ export const blogPosts: BlogPost[] = [
         text: "We built Handsfree because we ran a trade business and lived this exact problem. It's set up, monitored, and improved for you. You get on with the work.",
       },
       { type: "cta", text: "See what's included on each plan and get set up.", to: "/pricing" },
+      {
+        type: "paragraph",
+        text: "If after-hours emergencies are your main pain point, read [how to handle after-hours emergency calls as a tradie](/blog/how-to-handle-after-hours-emergency-calls-as-a-tradie) for the full triage system.",
+      },
     ],
   },
 
@@ -582,6 +606,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "Fix your voicemail today. Turn on a missed-call text this week. Then decide whether you want calls answered properly, or just acknowledged. One of those books jobs while you're on the tools. The other just buys you time to ring back.",
       },
+      {
+        type: "paragraph",
+        text: "Wondering why voicemail specifically doesn't work anymore? Read [why customers don't leave voicemails](/blog/why-customers-dont-leave-voicemails).",
+      },
     ],
   },
 
@@ -683,6 +711,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "Never miss a call. Ever again. That's the whole point.",
       },
+      {
+        type: "paragraph",
+        text: "For a closer look at exactly how this compares to your current voicemail setup, read [virtual receptionist vs answering machine](/blog/virtual-receptionist-vs-answering-machine).",
+      },
     ],
   },
 
@@ -782,6 +814,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "Setup takes a short onboarding call — we build it, you get back on the tools.",
       },
+      {
+        type: "paragraph",
+        text: "Curious why callers hang up instead of leaving a message in the first place? Read [why customers don't leave voicemails](/blog/why-customers-dont-leave-voicemails).",
+      },
     ],
   },
 
@@ -879,6 +915,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "Whatever you choose, choose something. A phone that rings out is the most expensive thing in a trade business.",
       },
+      {
+        type: "paragraph",
+        text: "If you're also weighing up hiring an actual person, see our [receptionist vs AI receptionist cost comparison](/blog/receptionist-vs-ai-receptionist-cost-comparison).",
+      },
     ],
   },
 
@@ -972,6 +1012,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "One last thing worth asking any provider: what happens on your busiest day? A human service can put callers on hold. AI answers all of them at once. When you've got a heatwave and every aircon in the suburb has died, that difference is the whole ballgame.",
+      },
+      {
+        type: "paragraph",
+        text: "For the tier-by-tier breakdown of what Handsfree specifically includes at each price point, see [how much an AI receptionist costs in Australia](/blog/how-much-does-an-ai-receptionist-cost-in-australia).",
       },
     ],
   },
@@ -1070,6 +1114,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "Your phone is your pipeline. If it's ringing out while you're on site, that pipeline has a hole in it — and it's costing you more than a subscription ever will.",
+      },
+      {
+        type: "paragraph",
+        text: "For the maths on what a missed call is really costing your business, read [how many jobs you're losing to missed calls](/blog/how-many-jobs-are-you-losing-to-missed-calls).",
       },
     ],
   },
@@ -1187,6 +1235,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "Air con is a trade where the phone is the business. Every heatwave is a test of whether you can pick up. Sort that out once and you stop leaving money on the roof.",
       },
+      {
+        type: "paragraph",
+        text: "For a full system on triaging urgent versus routine calls, see [how to handle after-hours emergency calls as a tradie](/blog/how-to-handle-after-hours-emergency-calls-as-a-tradie).",
+      },
     ],
   },
 
@@ -1300,6 +1352,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "You can't hear the phone over a mower. You don't have to. Let something else pick it up.",
       },
+      {
+        type: "paragraph",
+        text: "Running this on your own? Read [phone answering for solo tradies](/blog/phone-answering-for-solo-tradies) for a setup built around a one-person operation.",
+      },
     ],
   },
 
@@ -1396,6 +1452,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "Locksmithing is a race to answer. Win the race and the rest of the job is easy.",
+      },
+      {
+        type: "paragraph",
+        text: "Since so much locksmith work happens after hours, see [how to handle after-hours emergency calls as a tradie](/blog/how-to-handle-after-hours-emergency-calls-as-a-tradie) for how to set your own emergency rules.",
       },
     ],
   },
@@ -1509,6 +1569,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "Never miss a call. Ever again — even when you're 8 metres up with both hands full.",
       },
+      {
+        type: "paragraph",
+        text: "Want storm calls booked straight into your diary without you touching the phone? Read [how to book jobs automatically after hours](/blog/book-jobs-automatically-after-hours).",
+      },
     ],
   },
 
@@ -1614,7 +1678,7 @@ export const blogPosts: BlogPost[] = [
       { type: "cta", text: "See what each tier includes and what it costs — no quote form, no games.", to: "/pricing" },
       {
         type: "paragraph",
-        text: "Still weighing it up? Have a read of how much an AI receptionist costs in Australia, or work out how many jobs you're actually losing to missed calls first.",
+        text: "Still weighing it up? Have a read of [how much an AI receptionist costs in Australia](/blog/how-much-does-an-ai-receptionist-cost-in-australia), or work out [how many jobs you're actually losing to missed calls](/blog/how-many-jobs-are-you-losing-to-missed-calls) first.",
       },
     ],
   },
@@ -1713,6 +1777,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "Setup is quick, there's no contract, and you can start with text-back and move up if you want live answering later.",
       },
+      {
+        type: "paragraph",
+        text: "If you want the detail on why voicemail specifically fails, read [why customers don't leave voicemails](/blog/why-customers-dont-leave-voicemails).",
+      },
     ],
   },
 
@@ -1798,6 +1866,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "Your voicemail isn't a safety net. It's a hole in the bottom of the bucket. Plug it and you'll be surprised how much work was already coming your way.",
+      },
+      {
+        type: "paragraph",
+        text: "For the full list of fixes, from free to fully handled, see [how to stop missing calls as a tradie](/blog/how-to-stop-missing-calls-as-a-tradie).",
       },
     ],
   },
@@ -1932,6 +2004,10 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         text: "Set your emergency list, set your rates, and put something in front of your phone that never sleeps. That's the whole system.",
       },
+      {
+        type: "paragraph",
+        text: "Once your triage rules are set, the next step is getting the non-urgent ones booked automatically — see [how to book jobs automatically after hours](/blog/book-jobs-automatically-after-hours).",
+      },
     ],
   },
 
@@ -2044,6 +2120,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "That's the whole argument. Answer the phone at 7pm without being there, and next week's diary sorts itself out.",
+      },
+      {
+        type: "paragraph",
+        text: "For the rules on which calls should escalate straight to your mobile instead of being booked automatically, read [how to handle after-hours emergency calls as a tradie](/blog/how-to-handle-after-hours-emergency-calls-as-a-tradie).",
       },
     ],
   },

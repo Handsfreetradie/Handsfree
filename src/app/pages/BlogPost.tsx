@@ -1,8 +1,29 @@
+import type { ReactNode } from "react";
 import { Link, Navigate, useParams } from "react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Seo } from "../components/Seo";
 import { blogPosts } from "../../content/blogPosts";
+
+const INLINE_LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+function renderInlineLinks(text: string) {
+  const parts: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  INLINE_LINK_RE.lastIndex = 0;
+  while ((match = INLINE_LINK_RE.exec(text))) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    parts.push(
+      <Link key={match.index} to={match[2]} className="text-orange-500 hover:underline">
+        {match[1]}
+      </Link>,
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return parts;
+}
 
 export function BlogPost() {
   const { slug } = useParams();
@@ -37,7 +58,7 @@ export function BlogPost() {
                 return (
                   <ul key={i} className="list-disc pl-6 space-y-2">
                     {block.items?.map((item, j) => (
-                      <li key={j}>{item}</li>
+                      <li key={j}>{renderInlineLinks(item)}</li>
                     ))}
                   </ul>
                 );
@@ -53,7 +74,7 @@ export function BlogPost() {
                   </Link>
                 );
               }
-              return <p key={i}>{block.text}</p>;
+              return <p key={i}>{renderInlineLinks(block.text || "")}</p>;
             })}
           </div>
 
