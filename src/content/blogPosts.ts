@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
     title: "Virtual Receptionist for Electricians: What Actually Works",
     description:
       "A practical guide to using a virtual receptionist for electricians in Australia — what it costs, what it should handle, and how to set one up without losing jobs.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-07-13",
     excerpt:
       "Every call you miss on the tools is a job someone else is quoting. Here's how a virtual receptionist works for electricians, what it should handle, and what it costs.",
     body: [
@@ -251,7 +251,7 @@ export const blogPosts: BlogPost[] = [
     title: "Answering Service for Plumbers: What Actually Works in 2026",
     description:
       "A plain-English guide to answering services for plumbers in Australia: what they cost, what AI does better than a call centre, and how to pick the right setup.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-07-16",
     excerpt:
       "Burst pipes don't wait for you to climb out from under a sink. Here's how answering services for plumbers actually work, what they cost, and which type suits a working plumber.",
     body: [
@@ -362,7 +362,7 @@ export const blogPosts: BlogPost[] = [
     title: "24/7 Call Answering Service for Tradies: What to Know",
     description:
       "How a 24/7 call answering service works for Australian tradies, what it costs, and how to pick one that actually books jobs instead of taking messages.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-07-19",
     excerpt:
       "Most trade enquiries come in when you're on the tools or off the clock. Here's how a 24/7 call answering service works for tradies, what it costs, and what to look for.",
     body: [
@@ -484,7 +484,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to Stop Missing Calls as a Tradie (7 Real Fixes)",
     description:
       "Practical ways Aussie tradies can stop missing calls while on the tools — from voicemail fixes and diverts to AI answering that books jobs 24/7.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-07-22",
     excerpt:
       "You can't answer the phone with your hands in a switchboard. Here are the fixes that actually work for tradies — ranked from free to fully handled.",
     body: [
@@ -590,7 +590,7 @@ export const blogPosts: BlogPost[] = [
     title: "AI Phone Answering for Trade Businesses: How It Works",
     description:
       "How AI phone answering works for Australian trade businesses, what it costs, and how it compares to voicemail, call diverts and a human receptionist.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-07-25",
     excerpt:
       "AI phone answering picks up every call while you're on the tools, gets the job details and books the work. Here's how it actually works for a trade business.",
     body: [
@@ -691,7 +691,7 @@ export const blogPosts: BlogPost[] = [
     title: "Virtual Receptionist vs Answering Machine: What Tradies Need",
     description:
       "Answering machines send callers to voicemail. A virtual receptionist answers, qualifies and books. Here's how the two compare for Australian trade businesses.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-07-28",
     excerpt:
       "An answering machine tells your caller you're busy. A virtual receptionist actually handles the call. Here's the real difference — and what it costs you when you pick wrong.",
     body: [
@@ -790,7 +790,7 @@ export const blogPosts: BlogPost[] = [
     title: "Best Call Answering Service for a Small Trade Business",
     description:
       "Comparing call answering options for small Australian trade businesses: answering services, virtual receptionists, and AI. What each costs and what actually works.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-07-31",
     excerpt:
       "There are four or five different things sold as \"call answering\" for a small trade business, and they don't all do the same job. Here's an honest comparison of what each costs and actually does.",
     body: [
@@ -887,7 +887,7 @@ export const blogPosts: BlogPost[] = [
     title: "Virtual Receptionist Cost in Australia: Real Prices (2026)",
     description:
       "What a virtual receptionist actually costs in Australia — per-call, per-minute and flat monthly pricing explained, plus how AI answering compares for tradies.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-03",
     excerpt:
       "Virtual receptionist pricing in Australia is a mess of per-call fees, per-minute rates and setup charges. Here's what you'll actually pay — and what an AI receptionist costs instead.",
     body: [
@@ -981,7 +981,7 @@ export const blogPosts: BlogPost[] = [
     title: "Virtual Receptionist for Builders: Stop Losing Leads",
     description:
       "Builders miss calls on site every day. Here's how a virtual receptionist answers every enquiry, filters tyre-kickers and books real jobs into your calendar.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-06",
     excerpt:
       "You can't answer the phone with a nail gun in your hand. Here's how a virtual receptionist keeps every enquiry answered while you're on the tools or on site.",
     body: [
@@ -1079,7 +1079,7 @@ export const blogPosts: BlogPost[] = [
     title: "Answering Service for HVAC & Air Con Technicians",
     description:
       "How an answering service for HVAC and air conditioning technicians stops lost jobs during heatwaves, breakdowns and after-hours calls. Real pricing inside.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-09",
     excerpt:
       "Air con work comes in waves — and every heatwave brings more calls than you can answer with your hands in a ceiling. Here's how an answering service keeps those jobs from going to the next bloke.",
     body: [
@@ -1195,7 +1195,7 @@ export const blogPosts: BlogPost[] = [
     title: "AI Receptionist for Landscapers & Gardeners in Australia",
     description:
       "Mowers running, phone ringing, jobs lost. Here's how an AI receptionist answers every call for landscapers and gardeners, with real Aussie pricing.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-12",
     excerpt:
       "You can't hear the phone over a brushcutter, and quoting season doesn't wait. Here's how an AI receptionist keeps every landscaping and gardening enquiry from going to voicemail.",
     body: [
@@ -1308,7 +1308,7 @@ export const blogPosts: BlogPost[] = [
     title: "Phone Answering Service for Locksmiths (AU Pricing Guide)",
     description:
       "Locksmith calls are urgent and often after hours. Here's how a phone answering service works for locksmiths in Australia, what it costs, and what to look for.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-15",
     excerpt:
       "Locksmith work is the definition of urgent — if you don't answer, the next locksmith does. Here's how a phone answering service works for locksmiths, and what it actually costs.",
     body: [
@@ -1405,7 +1405,7 @@ export const blogPosts: BlogPost[] = [
     title: "Virtual Receptionist for Roofing Companies (Australia)",
     description:
       "How a virtual receptionist helps Australian roofing companies stop missing calls, book more inspections and quote storm work faster. Real pricing, no lock-in.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-18",
     excerpt:
       "Roofing calls come in bursts — after storms, during leaks, when a tile lets go. Here's how a virtual receptionist keeps every one of those calls answered while you're up on a roof.",
     body: [
@@ -1517,7 +1517,7 @@ export const blogPosts: BlogPost[] = [
     title: "Receptionist vs AI Receptionist: Real Cost Comparison",
     description:
       "Weighing up hiring a receptionist against an AI receptionist? Here's an honest cost comparison for Australian trade businesses, including hidden on-costs.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-21",
     excerpt:
       "Hiring someone to answer the phone sounds simple until you add up wages, super, leave and training. Here's how a human receptionist stacks up against an AI one for a trade business.",
     body: [
@@ -1624,7 +1624,7 @@ export const blogPosts: BlogPost[] = [
     title: "Phone Answering for Solo Tradies: What Actually Works",
     description:
       "Running a trade business on your own? Here's how phone answering for solo tradies works, what it costs, and how to stop losing jobs while you're on the tools.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-24",
     excerpt:
       "When you're a one-man band, every missed call is a job someone else gets. Here's how phone answering works for solo tradies — and what it actually costs.",
     body: [
@@ -1721,7 +1721,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why Customers Don't Leave Voicemails (And What To Do)",
     description:
       "Most people who ring a tradie won't leave a voicemail — they just call the next name on the list. Here's why it happens and how to stop losing those jobs.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-27",
     excerpt:
       "Your voicemail isn't broken — nobody's using it. Here's why customers hang up instead of leaving a message, and what actually captures those calls.",
     body: [
@@ -1807,7 +1807,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to Handle After-Hours Emergency Calls as a Tradie",
     description:
       "A practical guide for Aussie tradies on handling after-hours emergency calls: setting rules, screening urgency, pricing callouts and never missing the good ones.",
-    publishedDate: "2026-09-02",
+    publishedDate: "2026-08-30",
     excerpt:
       "Emergency calls don't wait for business hours. Here's how to set up a system that catches the urgent jobs, filters the time-wasters, and still lets you eat dinner in peace.",
     body: [
