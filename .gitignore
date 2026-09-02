@@ -3,4 +3,5 @@ dist/
 .DS_Store
 .env
 scripts/cold-email/data/
+scripts/seo-articles/output/
 ads/
